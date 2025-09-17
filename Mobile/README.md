@@ -24,6 +24,17 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [앱_백그라운드_스냅샷]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
+### Script
+* [AlertDialog]{:.heading.flip-title} --- How to install and run Hydejack.
+* [capture]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Load_library]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [native_hook_sample]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [phone_number_change]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [pthread]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [stackTrace]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [toast]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+{:.related-posts.faded}
+
 ## Using Hydejack
 * [Basics]{:.heading.flip-title} --- How to add different types of content.
 * [Writing]{:.heading.flip-title} --- Producing markdown content for Hydejack.
@@ -45,9 +56,14 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [Integrity_Test]: /AOS/Integrity_Test.md
 [디버거_붙이기]: /AOS/디버거_붙이기.md
 [앱_백그라운드_스냅샷]: /AOS/앱_백그라운드_스냅샷.md
-[build]: build.md
-[deploy]: deploy.md
-[advanced]: advanced.md
+[AlertDialog]: /AOS/Script/AlertDialog.md
+[capture]: /AOS/Script/capture.md
+[Load_library]: /AOS/Script/Load_library.md
+[native_hook_sample]: /AOS/Script/native_hook_sample.md
+[phone_number_change]: /AOS/Script/phone_number_change.md
+[pthread]: /AOS/Script/pthread.md
+[stackTrace]: /AOS/Script/stackTrace.md
+[toast]: /AOS/Script/toast.md
 [LICENSE]: ../LICENSE.md
 [NOTICE]: ../NOTICE.md
 [CHANGELOG]: ../CHANGELOG.md
