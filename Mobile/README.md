@@ -15,6 +15,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 
 
 ## AOS
+### Other
 * [Activity_강제_실행]{:.heading.flip-title} --- How to install and run Hydejack.
 * [Upgrade]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
 * [Config]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
