@@ -1,3 +1,11 @@
+---
+layout: page
+title: grep
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 ```bash
 grep -rinoE "검색할_문자열" /검색할_디렉토리

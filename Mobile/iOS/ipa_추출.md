@@ -1,3 +1,11 @@
+---
+layout: page
+title: ipa_추출
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 frida-ios-dump 의 [dump.py](http://dump.py) 를 수정
 

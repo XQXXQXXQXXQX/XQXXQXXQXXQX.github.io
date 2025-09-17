@@ -1,3 +1,11 @@
+---
+layout: page
+title: frida_포트_변경_iOS
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 ## ✅ iOS에서 Frida포트 변경 (launchd plist 수정)
 
@@ -61,4 +69,4 @@ launchctl load /var/jb/Library/LaunchDaemons/re.frida.server.plist
 
 git에서 iproxy를 설치해서 포트포워딩 해준다. (환경변수 설정)
 
-![[image (3).png]]
+![image_(3).png](/image/image_(3).png)
