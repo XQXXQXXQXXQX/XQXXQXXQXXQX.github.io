@@ -7,7 +7,7 @@ hide_description: true
 sitemap: false
 ---
 
-```js title="capture.js"
+```js
 if (ObjC.available) {
     console.log("[*] 시작: 캡처 방지 우회 적용");
 
