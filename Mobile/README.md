@@ -47,15 +47,9 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 ### Script
-* [AlertDialog]{:.heading.flip-title} --- How to install and run Hydejack.
-* [capture]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [Load_library]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [native_hook_sample]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [phone_number_change]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [pthread]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [stackTrace]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [ipa_추출]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-{:.related-posts.faded}
+* [capture_iOS]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Appiron]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+
 
 ## Other
 * [LICENSE]{:.heading.flip-title} --- The license of this project.
@@ -86,6 +80,8 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [ipa_추출]: /iOS/ipa_추출.md
 [디버거_붙이기_iOS]: /iOS/디버거_붙이기.md
 [앱_백그라운드_스냅샷_iOS]: /iOS/앱_백그라운드_스냅샷.md
+[capture_iOS]: /iOS/Script/capture.md
+[Appiron]: /iOS/Script/AppIron.md
 
 
 [LICENSE]: ../LICENSE.md

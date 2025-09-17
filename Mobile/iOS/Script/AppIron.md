@@ -1,5 +1,13 @@
+---
+layout: page
+title: Appiron
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
-```js title="AppIron.js"
+```js
 if(ObjC.available){
 
     console.log("[*] 시작: 캡처 방지 우회 적용");
