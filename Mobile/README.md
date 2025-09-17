@@ -17,7 +17,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 ## AOS
 ### Other
 * [Activity_강제_실행]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Upgrade]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [frida_포트_변경]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
 * [Config]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
@@ -37,7 +37,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 [Activity_강제_실행]: /AOS/Activity_강제_실행.md
-[upgrade]: upgrade.md
+[frida_포트_변경]: /AOS/frida_포트_변경.md
 [config]: config.md
 [basics]: basics.md
 [writing]: writing.md
