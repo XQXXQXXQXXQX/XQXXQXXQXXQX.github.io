@@ -49,8 +49,8 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             test1
-    url:               /example/
+  - title:             Mobile
+    url:               /Mobile/
   - title:             test2
     url:               /docs/
   - title:             test3
