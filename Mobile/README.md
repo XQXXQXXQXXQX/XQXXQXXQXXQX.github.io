@@ -19,6 +19,9 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [Activity_강제_실행]{:.heading.flip-title} --- How to install and run Hydejack.
 * [frida_포트_변경]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
 * [fridump]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [Integrity_Test]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [디버거_붙이기]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [앱_백그라운드_스냅샷]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
 ## Using Hydejack
@@ -39,9 +42,9 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [Activity_강제_실행]: /AOS/Activity_강제_실행.md
 [frida_포트_변경]: /AOS/frida_포트_변경.md
 [fridump]: /AOS/fridump.md
-[basics]: basics.md
-[writing]: writing.md
-[scripts]: scripts.md
+[Integrity_Test]: /AOS/Integrity_Test.md
+[디버거_붙이기]: /AOS/디버거_붙이기.md
+[앱_백그라운드_스냅샷]: /AOS/앱_백그라운드_스냅샷.md
 [build]: build.md
 [deploy]: deploy.md
 [advanced]: advanced.md
