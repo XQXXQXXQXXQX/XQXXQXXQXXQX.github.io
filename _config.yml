@@ -51,8 +51,8 @@ author:
 menu:
   - title:             Mobile
     url:               /Mobile/
-  - title:             test2
-    url:               /docs/
+  - title:             OSCP(공부중)
+    url:               /OSCP/
   - title:             test3
     url:               /about/
 
