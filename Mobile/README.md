@@ -35,13 +35,26 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [toast]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
-## Using Hydejack
-* [Basics]{:.heading.flip-title} --- How to add different types of content.
-* [Writing]{:.heading.flip-title} --- Producing markdown content for Hydejack.
-* [Scripts]{:.heading.flip-title} --- How to include 3rd party scripts on your site.
-* [Build]{:.heading.flip-title} --- How to build the static files for deployment.
-* [Deploy]{:.heading.flip-title} --- 🆕 How to deploy to a variety of popular providers.
-* [Advanced]{:.heading.flip-title} --- Guides for more advanced tasks.
+## iOS
+### Other
+* [frida_trace]{:.heading.flip-title} --- How to install and run Hydejack.
+* [frida_포트_변경_iOS]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [fridump_iOS]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [grep]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [ipa_추출]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [디버거_붙이기_iOS]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [앱_백그라운드_스냅샷_iOS]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+{:.related-posts.faded}
+
+### Script
+* [AlertDialog]{:.heading.flip-title} --- How to install and run Hydejack.
+* [capture]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Load_library]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [native_hook_sample]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [phone_number_change]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [pthread]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [stackTrace]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [ipa_추출]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
 ## Other
@@ -64,6 +77,17 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [pthread]: /AOS/Script/pthread.md
 [stackTrace]: /AOS/Script/stackTrace.md
 [toast]: /AOS/Script/toast.md
+
+
+[frida_trace]: /iOS/frida_trace.md
+[frida_포트_변경_iOS]: /iOS/frida_포트_변경.md
+[fridump_iOS]: /iOS/fridump.md
+[grep]: /iOS/grep.md
+[ipa_추출]: /iOS/ipa_추출.md
+[디버거_붙이기_iOS]: /iOS/디버거_붙이기.md
+[앱_백그라운드_스냅샷_iOS]: /iOS/앱_백그라운드_스냅샷.md
+
+
 [LICENSE]: ../LICENSE.md
 [NOTICE]: ../NOTICE.md
 [CHANGELOG]: ../CHANGELOG.md
