@@ -1,6 +1,6 @@
 
 
-```js title:"native.js"
+```js
 
 
 function next_f(sub2)

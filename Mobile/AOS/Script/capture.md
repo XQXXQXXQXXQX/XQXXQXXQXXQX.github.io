@@ -1,6 +1,6 @@
 
 
-```js title:"capture.js"
+```js
 Java.perform(function() {
     var surface_view = Java.use('android.view.SurfaceView');
     var set_secure = surface_view.setSecure.overload('boolean');

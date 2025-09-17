@@ -1,6 +1,6 @@
 
 
-```js title:"AlertDialog.js"
+```js
 Java.perform(function () {
 	// var ThreadDef = Java.use('java.lang.Thread');
 	// var ThreadObj = ThreadDef.$new();

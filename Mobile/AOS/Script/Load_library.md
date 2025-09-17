@@ -1,6 +1,6 @@
 
 
-```js title:"Load_library.js"
+```js
 var dlopen = new NativeFunction(Module.findExportByName(null, 'dlopen'), 'pointer', ['pointer', 'int']);
 
 Interceptor.replace(dlopen, new NativeCallback(function(path, mode) {

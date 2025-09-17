@@ -1,6 +1,6 @@
 
 
-```js title:"pthread.js"
+```js
 var count = 1;
 
 Interceptor.attach(Module.findExportByName(null, 'pthread_create'), {

@@ -1,6 +1,6 @@
 
 
-```js title:"stackTrace.js"
+```js
 function stackTrace() {
     var ThreadDef = Java.use('java.lang.Thread');
     var ThreadObj = ThreadDef.$new();
