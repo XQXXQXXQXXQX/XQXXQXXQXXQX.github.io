@@ -1,3 +1,11 @@
+---
+layout: page
+title: Kerberos_기법
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 ## 🏢 커버로스(Kerberos)란 무엇인가? (쉽게 이해하기)
 

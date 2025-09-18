@@ -1,6 +1,12 @@
-
-
 ---
+layout: page
+title: Check_List_(AD)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
 
 ### **Active Directory (액티브 디렉터리):**
 

@@ -22,15 +22,12 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 ### Windows_Methodology
-* [Install]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Upgrade]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [Config]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [Kerberos_기법]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
 ### Other
-* [Install]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Upgrade]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [Config]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [Check_List_(Standalones)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Check_List_(AD)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
 {:.related-posts.faded}
 
 ## Using Hydejack
@@ -53,6 +50,9 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [Linux_Automated_Enum]: /00_방법론_및_체크리스트/Linux_Methodology/Linux_Automated_Enum.md
 
 [Kerberos_기법]: /00_방법론_및_체크리스트/Windows_Methodology/Kerberos_기법.md
+
+[Check_List_(Standalones)]: /00_방법론_및_체크리스트/Check_List_(Standalones).md
+[Check_List_(AD)]: /00_방법론_및_체크리스트/Check_List_(AD).md
 
 
 

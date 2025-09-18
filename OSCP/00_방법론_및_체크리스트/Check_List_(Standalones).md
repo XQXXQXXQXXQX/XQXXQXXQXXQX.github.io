@@ -1,3 +1,11 @@
+---
+layout: page
+title: Check_List_(Standalones)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 #### **Initial Recon & Access (초기 정찰 및 접근)**
 

