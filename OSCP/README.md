@@ -52,6 +52,10 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [Interactive_Shell_(shell_안정화)]: /00_방법론_및_체크리스트/Linux_Methodology/Interactive_Shell_(shell_안정화).md
 [Linux_Automated_Enum]: /00_방법론_및_체크리스트/Linux_Methodology/Linux_Automated_Enum.md
 
+[Kerberos_기법]: /00_방법론_및_체크리스트/Windows_Methodology/Kerberos_기법.md
+
+
+
 
 [upgrade]: upgrade.md
 [config]: config.md
