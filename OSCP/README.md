@@ -30,14 +30,26 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [Check_List_(AD)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
 {:.related-posts.faded}
 
-## Using Hydejack
-* [Basics]{:.heading.flip-title} --- How to add different types of content.
-* [Writing]{:.heading.flip-title} --- Producing markdown content for Hydejack.
-* [Scripts]{:.heading.flip-title} --- How to include 3rd party scripts on your site.
-* [Build]{:.heading.flip-title} --- How to build the static files for deployment.
-* [Deploy]{:.heading.flip-title} --- 🆕 How to deploy to a variety of popular providers.
-* [Advanced]{:.heading.flip-title} --- Guides for more advanced tasks.
+
+## 01_정찰_및_정보_수집
+### Service_Enumeration
+* [NFS_(2049)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [RPC_(135)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [SMB_(139,_445)]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [SNMP_(161)]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [SNMP_Example_diagram]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
+
+### Windows_Methodology
+* [Kerberos_기법]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+### Other
+* [Check_List_(Standalones)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Check_List_(AD)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+{:.related-posts.faded}
+
+
 
 ## Other
 * [LICENSE]{:.heading.flip-title} --- The license of this project.
@@ -54,17 +66,15 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [Check_List_(Standalones)]: /00_방법론_및_체크리스트/Check_List_(Standalones).md
 [Check_List_(AD)]: /00_방법론_및_체크리스트/Check_List_(AD).md
 
+[NFS_(2049)]: /01_정찰_및_정보_수집/Service_Enumeration/NFS_(2049).md
+[RPC_(135)]: /01_정찰_및_정보_수집/Service_Enumeration/RPC_(135).md
+[SMB_(139,_445)]: /01_정찰_및_정보_수집/Service_Enumeration/SMB_(139,_445).md
+[SNMP_(161)]: /01_정찰_및_정보_수집/Service_Enumeration/SNMP_(161).md
+[SNMP_Example_diagram]: /01_정찰_및_정보_수집/Service_Enumeration/SNMP_Example_diagram.md
 
 
 
-[upgrade]: upgrade.md
-[config]: config.md
-[basics]: basics.md
-[writing]: writing.md
-[scripts]: scripts.md
-[build]: build.md
-[deploy]: deploy.md
-[advanced]: advanced.md
+
 [LICENSE]: ../LICENSE.md
 [NOTICE]: ../NOTICE.md
 [CHANGELOG]: ../CHANGELOG.md
