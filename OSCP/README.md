@@ -40,13 +40,15 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [SNMP_Example_diagram]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
-### Windows_Methodology
-* [Kerberos_기법]{:.heading.flip-title} --- How to install and run Hydejack.
+### User_Discovery
+* [kerbrute_for_usernames]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Names_to_username_AD]{:.heading.flip-title} --- How to install and run Hydejack.
+* [netexec]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
 ### Other
-* [Check_List_(Standalones)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Check_List_(AD)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Network_Scanning]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Web_Content_Discovery]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
 {:.related-posts.faded}
 
 
@@ -72,7 +74,12 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [SNMP_(161)]: /01_정찰_및_정보_수집/Service_Enumeration/SNMP_(161).md
 [SNMP_Example_diagram]: /01_정찰_및_정보_수집/Service_Enumeration/SNMP_Example_diagram.md
 
+[kerbrute_for_usernames]: /01_정찰_및_정보_수집/User_Discovery/kerbrute_for_usernames.md
+[Names_to_username_AD]: /01_정찰_및_정보_수집/User_Discovery/Names_to_username_AD.md
+[netexec]: /01_정찰_및_정보_수집/User_Discovery/netexec.md
 
+[Network_Scanning]: /01_정찰_및_정보_수집/Network_Scanning.md
+[Web_Content_Discovery]: /01_정찰_및_정보_수집/Web_Content_Discovery.md
 
 
 [LICENSE]: ../LICENSE.md
