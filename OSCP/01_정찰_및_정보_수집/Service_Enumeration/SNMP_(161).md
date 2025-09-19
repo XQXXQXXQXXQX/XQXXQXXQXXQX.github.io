@@ -17,7 +17,7 @@ SNMP(Simple Network Management Protocol)는 라우터, 스위치, 서버 등 네
 - **MIB (Management Information Base):** 장비가 관리하는 정보의 계층적인 데이터베이스입니다. 이 정보들은 트리 구조로 구성됩니다.
 - SNMP에 저장된 정보는 "트리" 형식이며 왼쪽에서 오른쪽으로 읽음. 예를들어 1.3.2 라면 다음 Diagram과 같음.  [[SNMP Example Diagram]]
 - **OID (Object Identifier):** MIB 트리 내에서 각 정보 항목을 가리키는 고유한 숫자 주소입니다. (예: `1.3.6.1.2.1.1.1.0`은 시스템 설명을 의미)
-You can now jump to [running locally](#running-locally).
+
 ---
 
 ### **1. Community String 찾기**
@@ -78,3 +78,4 @@ snmp-check -t $target -c public
 | TCP 로컬 포트 | `1.3.6.1.2.1.6.13.1.3` |
 
 
+{:toc}
