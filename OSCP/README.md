@@ -86,11 +86,20 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 
 ## 03_권한_상승
 ### Linux
-* [기존_파일_수정,_간단_리버스쉘(bash)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Hijacking_Python_Library]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Wildcard_Injection]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
 ### Windows
-* [pgp_파일_해독]{:.heading.flip-title} --- How to install and run Hydejack.
+#### AD 개체 권한
+* [AllowedToDelegate]{:.heading.flip-title} --- How to install and run Hydejack.
+* [GPO]{:.heading.flip-title} --- How to install and run Hydejack.
+* [RBCD_(Resource-Based_Constrained_Delegation)]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Dumping_Hashes
+* [mimikatz]{:.heading.flip-title} --- How to install and run Hydejack.
+* [쓰레기통_뒤지기]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
 
@@ -146,10 +155,15 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 
 [jenkins]: /02_초기_공격_및_익스플로잇/jenkins.md
 
+[Hijacking_Python_Library]: /03_권한_상승/Linux/Hijacking_Python_Library.md
+[Wildcard_Injection]: /03_권한_상승/Linux/Wildcard_Injection.md
 
+[AllowedToDelegate]: /03_권한_상승/Windows/AD_개체_권한/AllowedToDelegate.md
+[GPO]: /03_권한_상승/Windows/AD_개체_권한/GPO.md
+[RBCD_(Resource-Based_Constrained_Delegation)]: /03_권한_상승/Windows/AD_개체_권한/RBCD_(Resource-Based_Constrained_Delegation).md
 
-
-
+[mimikatz]: /03_권한_상승/Windows/Dumping_Hashes/mimikatz.md
+[쓰레기통_뒤지기]: /03_권한_상승/Windows/Dumping_Hashes/쓰레기통_뒤지기.md
 
 
 
