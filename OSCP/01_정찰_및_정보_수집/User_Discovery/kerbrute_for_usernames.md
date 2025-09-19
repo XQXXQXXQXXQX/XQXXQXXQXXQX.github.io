@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: kerbrute_for_usernames
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # Kerbrute 사용자 열거 가이드
 
@@ -17,7 +24,7 @@
 
 가장 간단한 방법은 미리 컴파일된 바이너리를 다운로드하는 것입니다.
 
-```bash(title="미리 컴파일된 바이너리 다운로드")
+```bash
 # 최신 릴리즈에서 자신의 OS에 맞는 바이너리 다운로드
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 
@@ -35,7 +42,7 @@ kerbrute -h
 
 - **목표:** 준비된 사용자 이름 목록(Wordlist)을 기반으로 도메인에 실제 존재하는 계정을 찾아냅니다.
 
-```bash(title="userenum 명령어 예시")
+```bash
 # --dc: 도메인 컨트롤러의 IP 주소
 # -d: 타겟 도메인 이름 (FQDN)
 # users.txt: 테스트할 사용자 이름 목록 파일

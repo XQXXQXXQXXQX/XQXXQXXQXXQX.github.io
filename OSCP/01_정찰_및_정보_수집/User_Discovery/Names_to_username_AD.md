@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: Names_to_username_AD
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # AD 사용자 이름 생성 가이드
 
@@ -16,12 +23,12 @@
 
 ### **2. 도구 설치 및 사용법**
 
-```bash title="도구 다운로드"
+```bash
 git clone https://github.com/mohinparamasivam/AD-Username-Generator
 cd AD-Username-Generator
 ```
 
-```bash title="사용자 이름 생성"
+```bash
 # -u: "Firstname Lastname" 형식의 이름 목록 파일
 # -o: 생성된 사용자 이름이 저장될 출력 파일
 python3 username-generate.py -u full_names.txt -o potential_usernames.txt
@@ -55,7 +62,7 @@ python3 username-generate.py -u full_names.txt -o potential_usernames.txt
 2.  **사용자 이름 생성 (Generate Usernames):** 위에서 설명한 `AD-Username-Generator`를 사용하여 수집된 이름 목록으로부터 가능한 모든 형식의 사용자 이름 목록을 생성합니다.
 
 3.  **유효성 검사 (Validate with Kerbrute):** 생성된 사용자 이름 목록을 `kerbrute`의 입력값으로 사용하여, Active Directory에 실제 존재하는 유효한 계정들만 선별합니다.
-```bash title="Kerbrute로 유효 계정 확인"
+```bash
 kerbrute userenum --dc <DC_IP> -d <domain.local> potential_usernames.txt -o valid_users.txt
 ```
 
