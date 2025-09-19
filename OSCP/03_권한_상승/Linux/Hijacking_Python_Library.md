@@ -25,7 +25,7 @@ https://rastating.github.io/privilege-escalation-via-python-library-hijacking/
 
 그럼에도 불구하고 권한을 상승시키려면 상승된 권한으로 Python 스크립트를 실행하는 방법도 필요합니다. 이는 상승된 권한으로 Python 스크립트를 실행하거나 SUID 파일을 통해 다른 취약점을 활용하여 스크립트를 실행하는 cronjob 또는 예약된 작업을 찾는 것을 의미합니다.
 
-![[Pasted image 20250911231826.png]]
+![Pasted_image_20250911231826.png](/image/Pasted_image_20250911231826.png)
 
 ---
 

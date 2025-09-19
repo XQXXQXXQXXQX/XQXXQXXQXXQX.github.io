@@ -1,5 +1,17 @@
+---
+layout: page
+title: Force_Change_Password_attack
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
-```powershell title="Set-ADAccountPassword"
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
+
+```powershell
 # 변경할 새 비밀번호를 SecureString으로 변환
 $newPassword = ConvertTo-SecureString 'NewPassword123!' -AsPlainText -Force
 

