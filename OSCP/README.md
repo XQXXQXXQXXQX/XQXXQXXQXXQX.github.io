@@ -16,7 +16,7 @@ OSCP 공부하면서 Ai, Posting, youtube 등 다양한 곳에서 정보 주워�
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-OSCP 공부하면서 내용 계속 추가중
+`OSCP 공부하면서 내용 계속 추가중`
 {:.note}
 
 
