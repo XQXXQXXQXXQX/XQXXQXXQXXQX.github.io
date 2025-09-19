@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: jenkins
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 http://localhost:8080/script 위치에 가서
 
