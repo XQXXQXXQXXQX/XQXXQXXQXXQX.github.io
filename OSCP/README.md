@@ -8,7 +8,10 @@ sitemap: false
 permalink: /OSCP/
 ---
 
-Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
+OSCP 공부하면서 Ai, Posting, youtube 등 다양한 곳에서 정보 주워와서 정리한 지극히 개인적인 Cheat Sheet.
+주워 온 명령어 바로 쓰면 이런저런 에러나면서 안되는 현상 발생.
+각종 Room, box 문제 풀면서 옵션 이것저것 바꿔보면서 실제로 되는 것만 작성.
+
 
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
@@ -18,7 +21,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 
 
 
-## 00_방법론_및_체크리스트
+## 방법론_및_체크리스트
 ### Linux_Methodology
 * [Enum_Cheatsheet]{:.heading.flip-title} --- How to install and run Hydejack.
 * [Interactive_Shell_(shell_안정화)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
@@ -35,7 +38,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 
-## 01_정찰_및_정보_수집
+## 정찰_및_정보_수집
 ### Service_Enumeration
 * [NFS_(2049)]{:.heading.flip-title} --- How to install and run Hydejack.
 * [RPC_(135)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
@@ -56,7 +59,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 
-## 02_초기_공격_및_익스플로잇
+## 초기_공격_및_익스플로잇
 ### Common_Techniques
 * [기존_파일_수정,_간단_리버스쉘(bash)]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
@@ -88,7 +91,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [jenkins]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
-## 03_권한_상승
+## 권한_상승
 ### Linux
 * [Hijacking_Python_Library]{:.heading.flip-title} --- How to install and run Hydejack.
 * [Wildcard_Injection]{:.heading.flip-title} --- How to install and run Hydejack.
@@ -127,7 +130,43 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 
+## 내부망_이동_및_후속_조치
+### Linux
+* [Hijacking_Python_Library]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Wildcard_Injection]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
 
+### Windows
+#### AD 개체 권한
+* [AllowedToDelegate]{:.heading.flip-title} --- How to install and run Hydejack.
+* [GPO]{:.heading.flip-title} --- How to install and run Hydejack.
+* [RBCD_(Resource-Based_Constrained_Delegation)]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Dumping_Hashes
+* [mimikatz]{:.heading.flip-title} --- How to install and run Hydejack.
+* [쓰레기통_뒤지기]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Privileges_&_groups
+* [DnsAdmins_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SeBackupPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SeDebugPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SeImpersonatePrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Server_Operator_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Service_Attacks
+* [Insecure_Service_Permissions]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Unquoted_Service_Path]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Other
+* [AD_CS_(Active_Directory_Certificate_Services)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [AlwaysInstallElevated_(feat._PrivescCheck.ps1)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Force_Change_Password_attack]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Golden_Ticket_Attack]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
 
 
 
