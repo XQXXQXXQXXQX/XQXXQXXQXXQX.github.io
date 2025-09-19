@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: wmiexec
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 - **목적:** WMI(RPC)를 통해 원격 시스템에 셸을 획득합니다.
 - **특징:** `psexec`보다 은밀하지만, 셸이 다소 불안정할 수 있습니다.

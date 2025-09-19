@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: secretsdump
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 ### **크리덴셜 덤프 및 파일 공유 (Credential Dumping & File Sharing)**
 

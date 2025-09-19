@@ -1,3 +1,11 @@
+---
+layout: page
+title: lookup_sid
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 RPC를 통한 익명 로그인을 활용하여 도메인의 SID를 무차별 대입 공격(bruteforcing) 시도, 그 결과를 tee 명령어를 사용해 사용자 이름 파일로 저장
 
