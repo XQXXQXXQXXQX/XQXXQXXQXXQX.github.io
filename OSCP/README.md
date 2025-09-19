@@ -131,42 +131,26 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 
 
 ## 내부망_이동_및_후속_조치
-### Linux
-* [Hijacking_Python_Library]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Wildcard_Injection]{:.heading.flip-title} --- How to install and run Hydejack.
+### Pivoting_and_Tunnelling
+* [methology]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Multi-hope_pivoting_diagram]{:.heading.flip-title} --- How to install and run Hydejack.
+* [nmap]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Pivoting_Guide]{:.heading.flip-title} --- How to install and run Hydejack.
+* [ssh]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Tunnelling]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
-### Windows
-#### AD 개체 권한
-* [AllowedToDelegate]{:.heading.flip-title} --- How to install and run Hydejack.
-* [GPO]{:.heading.flip-title} --- How to install and run Hydejack.
-* [RBCD_(Resource-Based_Constrained_Delegation)]{:.heading.flip-title} --- How to install and run Hydejack.
+
+### Post_Exploitation
+* [Remote_Hashdump_&_Bruteforce_Hashes]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
-#### Dumping_Hashes
-* [mimikatz]{:.heading.flip-title} --- How to install and run Hydejack.
-* [쓰레기통_뒤지기]{:.heading.flip-title} --- How to install and run Hydejack.
-{:.related-posts.faded}
 
-#### Privileges_&_groups
-* [DnsAdmins_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [SeBackupPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
-* [SeDebugPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
-* [SeImpersonatePrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Server_Operator_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
-{:.related-posts.faded}
 
-#### Service_Attacks
-* [Insecure_Service_Permissions]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Unquoted_Service_Path]{:.heading.flip-title} --- How to install and run Hydejack.
-{:.related-posts.faded}
 
-#### Other
-* [AD_CS_(Active_Directory_Certificate_Services)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [AlwaysInstallElevated_(feat._PrivescCheck.ps1)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Force_Change_Password_attack]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Golden_Ticket_Attack]{:.heading.flip-title} --- How to install and run Hydejack.
-{:.related-posts.faded}
+
+
+
 
 
 
@@ -235,6 +219,19 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [AlwaysInstallElevated_(feat._PrivescCheck.ps1)]: /03_권한_상승/Windows/AlwaysInstallElevated_(feat._PrivescCheck.ps1).md
 [Force_Change_Password_attack]: /03_권한_상승/Windows/Force_Change_Password_attack.md
 [Golden_Ticket_Attack]: /03_권한_상승/Windows/Golden_Ticket_Attack.md
+
+[methology]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/methology.md
+[Multi-hope_pivoting_diagram]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/Multi-hope_pivoting_diagram.md
+[nmap]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/nmap.md
+[Pivoting_Guide]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/Pivoting_Guide.md
+[ssh]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/ssh.md
+[Tunnelling]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/Tunnelling.md
+
+[_Bruteforce_Hashes]: /04_내부망_이동_및_후속_조치/Post_Exploitation/Remote_Hashdump_&_Bruteforce_Hashes.md
+
+
+
+
 
 
 
