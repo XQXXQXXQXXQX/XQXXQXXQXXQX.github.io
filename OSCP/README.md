@@ -52,6 +52,39 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 
+## 02_초기_공격_및_익스플로잇
+### Common_Techniques
+* [기존_파일_수정,_간단_리버스쉘(bash)]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+### Linux
+* [pgp_파일_해독]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+### Web_Attacks
+* [SSTI]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+### Windows_Attacks
+#### Get Shell
+* [evil-winrm]{:.heading.flip-title} --- How to install and run Hydejack.
+* [wmiexec]{:.heading.flip-title} --- How to install and run Hydejack.
+* [psexec]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Impacket_Tool
+* [GetNPUsers]{:.heading.flip-title} --- How to install and run Hydejack.
+* [GetST]{:.heading.flip-title} --- How to install and run Hydejack.
+* [GetUserSPNs]{:.heading.flip-title} --- How to install and run Hydejack.
+* [lookup_sid]{:.heading.flip-title} --- How to install and run Hydejack.
+* [secretsdump]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+### Other
+* [jenkins]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+
 
 ## Other
 * [LICENSE]{:.heading.flip-title} --- The license of this project.
@@ -80,6 +113,31 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 
 [Network_Scanning]: /01_정찰_및_정보_수집/Network_Scanning.md
 [Web_Content_Discovery]: /01_정찰_및_정보_수집/Web_Content_Discovery.md
+
+[기존_파일_수정,_간단_리버스쉘(bash)]: /02_초기_공격_및_익스플로잇/Common_Techniques/기존_파일_수정,_간단_리버스쉘(bash).md
+
+[pgp_파일_해독]: /02_초기_공격_및_익스플로잇/Linux/pgp_파일_해독.md
+
+[SSTI]: /02_초기_공격_및_익스플로잇/Web_Attacks/SSTI.md
+
+[evil-winrm]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Get_Shell/evil-winrm.md
+
+[GetNPUsers]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/GetNPUsers.md
+[GetST]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/GetST.md
+[GetUserSPNs]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/GetUserSPNs.md
+[lookup_sid]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/lookup_sid.md
+[psexec]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/psexec.md
+[secretsdump]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/secretsdump.md
+[wmiexec]: /02_초기_공격_및_익스플로잇/Windows_Attacks/Impacket_Tool/wmiexec.md
+
+[jenkins]: /02_초기_공격_및_익스플로잇/jenkins.md
+
+
+
+
+
+
+
 
 
 [LICENSE]: ../LICENSE.md
