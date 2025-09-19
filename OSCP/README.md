@@ -10,11 +10,12 @@ permalink: /OSCP/
 
 Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.
 {:.note}
 
-0. this unordered seed list will be replaced by toc as unordered list
-{:toc}
 
 
 ## 00_방법론_및_체크리스트
