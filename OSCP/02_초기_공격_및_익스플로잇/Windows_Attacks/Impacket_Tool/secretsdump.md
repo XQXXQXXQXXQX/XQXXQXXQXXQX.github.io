@@ -7,6 +7,9 @@ hide_description: true
 sitemap: false
 ---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 ### **크리덴셜 덤프 및 파일 공유 (Credential Dumping & File Sharing)**
 
 - **목적:** 원격 시스템의 SAM, LSA Secrets, NTDS.dit 등에서 모든 종류의 크리덴셜을 덤프합니다.

@@ -7,6 +7,9 @@ hide_description: true
 sitemap: false
 ---
 
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 http://localhost:8080/script 위치에 가서
 
 ```

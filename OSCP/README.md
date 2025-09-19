@@ -102,18 +102,32 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 * [쓰레기통_뒤지기]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
 
-
-
-
-
-
-
-
-## Other
-* [LICENSE]{:.heading.flip-title} --- The license of this project.
-* [NOTICE]{:.heading.flip-title} --- Parts of this program are provided under separate licenses.
-* [CHANGELOG]{:.heading.flip-title} --- Version history of Hydejack.
+#### Privileges_&_groups
+* [DnsAdmins_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SeBackupPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SeDebugPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SeImpersonatePrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Server_Operator_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
 {:.related-posts.faded}
+
+#### Service_Attacks
+* [Insecure_Service_Permissions]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Unquoted_Service_Path]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+#### Other
+* [AD_CS_(Active_Directory_Certificate_Services)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [AlwaysInstallElevated_(feat._PrivescCheck.ps1)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Force_Change_Password_attack]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Golden_Ticket_Attack]{:.heading.flip-title} --- How to install and run Hydejack.
+{:.related-posts.faded}
+
+
+
+
+
+
+
 
 [Enum_Cheatsheet]: /00_방법론_및_체크리스트/Linux_Methodology/Enum_Cheatsheet.md
 [Interactive_Shell_(shell_안정화)]: /00_방법론_및_체크리스트/Linux_Methodology/Interactive_Shell_(shell_안정화).md
@@ -165,6 +179,19 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [mimikatz]: /03_권한_상승/Windows/Dumping_Hashes/mimikatz.md
 [쓰레기통_뒤지기]: /03_권한_상승/Windows/Dumping_Hashes/쓰레기통_뒤지기.md
 
+[DnsAdmins_(Group)]: /03_권한_상승/Windows/Privileges_&_groups/DnsAdmins_(Group).md
+[SeBackupPrivilege]: /03_권한_상승/Windows/Privileges_&_groups/SeBackupPrivilege.md
+[SeDebugPrivilege]: /03_권한_상승/Windows/Privileges_&_groups/SeDebugPrivilege.md
+[SeImpersonatePrivilege]: /03_권한_상승/Windows/Privileges_&_groups/SeImpersonatePrivilege.md
+[Server_Operator_(Group)]: /03_권한_상승/Windows/Privileges_&_groups/Server_Operator_(Group).md
+
+[Insecure_Service_Permissions]: /03_권한_상승/Windows/Service_Attacks/Insecure_Service_Permissions.md
+[Unquoted_Service_Path]: /03_권한_상승/Windows/Service_Attacks/Unquoted_Service_Path.md
+
+[AD_CS_(Active_Directory_Certificate_Services)]: /03_권한_상승/Windows/AD_CS_(Active_Directory_Certificate_Services).md
+[AlwaysInstallElevated_(feat._PrivescCheck.ps1)]: /03_권한_상승/Windows/AlwaysInstallElevated_(feat._PrivescCheck.ps1).md
+[Force_Change_Password_attack]: /03_권한_상승/Windows/Force_Change_Password_attack.md
+[Golden_Ticket_Attack]: /03_권한_상승/Windows/Golden_Ticket_Attack.md
 
 
 
