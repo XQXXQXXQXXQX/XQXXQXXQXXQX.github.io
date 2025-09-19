@@ -146,7 +146,11 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 {:.related-posts.faded}
 
 
-
+## 도구_및_명령어
+### General_Commands
+* [mount_(WSL_환경)]{:.heading.flip-title} --- How to install and run Hydejack.
+#### 추가중
+{:.related-posts.faded}
 
 
 
@@ -227,11 +231,10 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [ssh]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/ssh.md
 [Tunnelling]: /04_내부망_이동_및_후속_조치/Pivoting_and_Tunnelling/Tunnelling.md
 
-[_Bruteforce_Hashes]: /04_내부망_이동_및_후속_조치/Post_Exploitation/Remote_Hashdump_&_Bruteforce_Hashes.md
+[Remote_Hashdump_&_Bruteforce_Hashes]: /04_내부망_이동_및_후속_조치/Post_Exploitation/Remote_Hashdump_&_Bruteforce_Hashes.md
 
 
-
-
+[mount_(WSL_환경)]: /99_도구_및_명령어/General_Commands/mount_(WSL_환경).md
 
 
 
