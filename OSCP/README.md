@@ -16,7 +16,7 @@ OSCP 공부하면서 Ai, Posting, youtube 등 다양한 곳에서 정보 주워�
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.
+OSCP 공부하면서 내용 계속 추가중
 {:.note}
 
 
