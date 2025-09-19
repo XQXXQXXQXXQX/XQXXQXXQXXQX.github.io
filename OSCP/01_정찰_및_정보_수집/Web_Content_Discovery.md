@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: Web_Content_Discovery
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # 웹 콘텐츠 탐색 가이드
 
@@ -11,7 +18,7 @@
 - **목표:** 단어 목록(Wordlist)을 기반으로 서버에 존재하는 디렉터리와 파일 경로를 추측하여 찾아냅니다.
 - **핵심 도구:** `gobuster`, `feroxbuster`, `ffuf`
 
-```bash title="Gobuster - 디렉터리 탐색"
+```bash
 # -u: 타겟 URL
 # -w: 사용할 단어 목록 파일
 # -t: 동시에 보낼 요청 수 (스레드)
@@ -21,7 +28,7 @@ gobuster dir -u http://$target -w /usr/share/seclists/Discovery/Web-Content/raft
 gobuster dir -u http://$target -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -o gb_dirs2.txt -b  403,404,400
 ```
 
-```bash title="Gobuster - 특정 확장자 파일 탐색"
+```bash
 # -x: 탐색할 파일 확장자 목록
 gobuster dir -u http://$target -w /usr/share/seclists/Discovery/Web-Content/common.txt -t 50 -x php,xml,html,js,sql,gz,zip,txt,bak -r -o gb_files.txt
 
@@ -41,14 +48,14 @@ Error: the server returns a status code that matches the provided options for no
 - **목표:** 동일한 IP 주소에서 여러 개의 다른 웹사이트를 운영하는 경우(가상 호스트), 숨겨진 하위 도메인이나 다른 도메인 이름을 찾아냅니다.
 - **핵심 전략:** HTTP 요청의 `Host` 헤더 값을 변경하며 서버의 반응을 확인합니다.
 
-```bash title="ffuf - Host 헤더 퍼징"
+```bash
 # -H: 수정할 HTTP 헤더. FUZZ 키워드에 단어 목록의 값이 삽입됨
 # -hc: 결과에서 제외할 HTTP 상태 코드 (Hide Code)
 # subdomains.txt: 'admin', 'dev', 'test' 등 하위 도메인 이름 목록
 ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u 'http://asdf.thm/' -H "HOST: FUZZ.asdf.thm" -fw 522
 ```
 
-```bash title="(do --hh 402 f.ex on the character count with wfuzz to filter it out)"
+```bash
 wfuzz -u http://$target/FUZZ --hc 404 -c -t 40 -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 
@@ -71,7 +78,7 @@ wfuzz -u http://$target/FUZZ --hc 404 -c -v -t 40 -w /usr/share/seclists/Discove
 - **목표:** 웹사이트를 자동으로 돌아다니며 페이지에 링크된 모든 경로, 특히 JavaScript 파일 내에 숨겨진 API 엔드포인트나 경로를 수집합니다.
 - **핵심 도구:** `katana`
 
-```bash title="Katana - 웹사이트 크롤링"
+```bash
 # -u: 타겟 URL
 # -jc: JavaScript 파일 내의 경로까지 분석
 # -silent: 불필요한 출력 최소화
@@ -91,7 +98,7 @@ katana -u http://$target$ -jc --depth 4 -silent
 - **`Discovery/Web-Content/big.txt`**: 매우 광범위한 목록으로, 다른 목록으로 결과를 찾지 못했을 때 사용해볼 만합니다.
 
 
-```txt
+```text
 /usr/share/seclists/Discovery/Web-Content/common.txt
 /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt

@@ -1,4 +1,11 @@
-
+---
+layout: page
+title: Network_Scanning
+description: >
+  This chapter covers the basics of content creation with Hydejack.
+hide_description: true
+sitemap: false
+---
 
 # 네트워크 스캔 가이드 (Nmap 활용)
 
@@ -42,22 +49,22 @@ nmap -Pn $target -sC -sV -v -T4 --min-rate 1500 --max-rtt-timeout 500ms --max-re
 
 
 
-```bash title="1단계: 빠른 전체 포트 스캔"
+```bash
 # 속도를 우선하여 모든 TCP 포트를 빠르게 스캔하고, 열린 포트만 `initial_scan.txt`에 저장
 nmap -p- -Pn --min-rate 2000 -T4 -oN initial_scan.txt $target
 ```
 
-```bash title="2단계: 상세 정보 스캔"
+```bash
 # 1단계에서 찾은 포트들(예: 22, 80, 445)을 대상으로 상세 스캔 실행
 nmap -p 22,80,445 -sV -sC -oN detailed_scan.txt $target
 ```
 
-```bash title="Rustscan을 이용한 2단계 동시 실행"
+```bash
 # Rustscan으로 포트를 초고속으로 찾고, 그 결과를 바로 Nmap에 넘겨 상세 스캔을 진행
 rustscan -a $target --ulimit 5000 -- -sV -sC -oN nmap_full.txt
 ```
 
-```bash title="취약점 진단 스크립트 실행"
+```bash
 # 식별된 서비스를 대상으로 알려진 취약점을 찾는 `vuln` 카테고리의 모든 스크립트를 실행
 nmap -p 22,80,445 --script vuln -oN vuln_scan.txt $target
 ```
@@ -71,7 +78,7 @@ nmap -p 22,80,445 --script vuln -oN vuln_scan.txt $target
 - **`-sT` (TCP Connect 스캔) 사용 필수:** `proxychains`는 완전한 TCP 연결(3-way handshake)만 중계할 수 있습니다. 따라서 SYN 패킷만 보내는 `-sS` (Stealth 스캔)은 동작하지 않으므로, 반드시 `-sT` 옵션을 사용해야 합니다.
 - **`-Pn` (Ping 스킵) 사용 필수:** `proxychains`는 ICMP(Ping) 패킷을 터널링할 수 없으므로, `-Pn` 옵션으로 호스트 활성 확인 단계를 건너뛰어야 합니다.
 
-```bash(title="Proxychains를 이용한 내부망 Nmap 스캔")
+```bash
 # -sT와 -Pn 옵션을 필수로 사용하여 내부망의 다른 호스트를 스캔
 proxychains -q nmap -sT -Pn -p 22,80,445 $internal_target_ip
 ```
