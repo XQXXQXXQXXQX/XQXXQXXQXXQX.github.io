@@ -8,9 +8,12 @@ sitemap: false
 permalink: /OSCP/
 ---
 
-OSCP 공부하면서 Ai, 해외 포스팅, youtube 등 다양한 곳에서 정보 주워와서 정리한 지극히 개인적인 Cheat Sheet.
-주워 온 명령어 바로 쓰면 버전차이 등의 다양한 이유로 에러나면서 안되는 현상 발생.
-각종 Room, box 문제 풀면서 옵션 이것저것 바꿔보면서 실제로 되는 것만 작성.
+2025-09-21 여전히 공부중  
+
+OSCP 공부하면서 Ai, 해외 포스팅, youtube 등 다양한 곳에서 정보 주워와서 정리한 지극히 개인적인 Cheat Sheet.  
+주워 온 명령어 바로 쓰면 버전차이 등의 다양한 이유로 에러나면서 안되는 현상 발생.  
+각종 Room, box 문제 풀면서 옵션 이것저것 바꿔보면서 실제로 되는 것만 작성.  
+
 
 
 0. this unordered seed list will be replaced by toc as unordered list
