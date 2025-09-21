@@ -8,7 +8,7 @@ sitemap: false
 permalink: /Mobile/
 ---
 
-업무 중 이래 저래 사용한 것
+업무 중 자주 사용한 것
 
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
