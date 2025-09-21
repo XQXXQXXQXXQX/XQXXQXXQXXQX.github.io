@@ -19,46 +19,41 @@ permalink: /Mobile/
 
 ## AOS
 ### Other
-* [Activity_강제_실행]{:.heading.flip-title} --- How to install and run Hydejack.
-* [frida_포트_변경]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [fridump]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [Integrity_Test]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [디버거_붙이기]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [앱_백그라운드_스냅샷]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [Activity_강제_실행]{:.heading.flip-title}
+* [frida_포트_변경]{:.heading.flip-title}
+* [fridump]{:.heading.flip-title}
+* [Integrity_Test]{:.heading.flip-title}
+* [디버거_붙이기]{:.heading.flip-title}
+* [앱_백그라운드_스냅샷]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Script
-* [AlertDialog]{:.heading.flip-title} --- How to install and run Hydejack.
-* [capture]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [Load_library]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [native_hook_sample]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [phone_number_change]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [pthread]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [stackTrace]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [toast]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [AlertDialog]{:.heading.flip-title}
+* [capture]{:.heading.flip-title}
+* [Load_library]{:.heading.flip-title}
+* [native_hook_sample]{:.heading.flip-title}
+* [phone_number_change]{:.heading.flip-title}
+* [pthread]{:.heading.flip-title}
+* [stackTrace]{:.heading.flip-title}
+* [toast]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ## iOS
 ### Other
-* [frida_trace]{:.heading.flip-title} --- How to install and run Hydejack.
-* [frida_포트_변경_iOS]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [fridump_iOS]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [grep]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [ipa_추출]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [디버거_붙이기_iOS]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [앱_백그라운드_스냅샷_iOS]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [frida_trace]{:.heading.flip-title}
+* [frida_포트_변경_iOS]{:.heading.flip-title}
+* [fridump_iOS]{:.heading.flip-title}
+* [grep]{:.heading.flip-title}
+* [ipa_추출]{:.heading.flip-title}
+* [디버거_붙이기_iOS]{:.heading.flip-title}
+* [앱_백그라운드_스냅샷_iOS]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Script
-* [capture_iOS]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [Appiron]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [capture_iOS]{:.heading.flip-title}
+* [Appiron]{:.heading.flip-title}
 
 
-## Other
-* [LICENSE]{:.heading.flip-title} --- The license of this project.
-* [NOTICE]{:.heading.flip-title} --- Parts of this program are provided under separate licenses.
-* [CHANGELOG]{:.heading.flip-title} --- Version history of Hydejack.
-{:.related-posts.faded}
 
 [Activity_강제_실행]: /AOS/Activity_강제_실행.md
 [frida_포트_변경]: /AOS/frida_포트_변경.md
