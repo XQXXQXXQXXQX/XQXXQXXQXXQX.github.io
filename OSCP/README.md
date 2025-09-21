@@ -25,130 +25,130 @@ OSCP 공부하면서 Ai, Posting, youtube 등 다양한 곳에서 정보 주워�
 ### Linux_Methodology
 * [Enum_Cheatsheet]{:.heading.flip-title}
 * [Interactive_Shell_(shell_안정화)]{:.heading.flip-title}
-* [Linux_Automated_Enum]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [Linux_Automated_Enum]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Windows_Methodology
-* [Kerberos_기법]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Kerberos_기법]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Other
-* [Check_List_(Standalones)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Check_List_(AD)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Check_List_(Standalones)]{:.heading.flip-title}
+* [Check_List_(AD)]{:.heading.flip-title}
 {:.related-posts.faded}
 
 
 ## 정찰_및_정보_수집
 ### Service_Enumeration
-* [NFS_(2049)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [RPC_(135)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [SMB_(139,_445)]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [SNMP_(161)]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
-* [SNMP_Example_diagram]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+* [NFS_(2049)]{:.heading.flip-title}
+* [RPC_(135)]{:.heading.flip-title}
+* [SMB_(139,_445)]{:.heading.flip-title}
+* [SNMP_(161)]{:.heading.flip-title}
+* [SNMP_Example_diagram]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### User_Discovery
-* [kerbrute_for_usernames]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Names_to_username_AD]{:.heading.flip-title} --- How to install and run Hydejack.
-* [netexec]{:.heading.flip-title} --- How to install and run Hydejack.
+* [kerbrute_for_usernames]{:.heading.flip-title}
+* [Names_to_username_AD]{:.heading.flip-title}
+* [netexec]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Other
-* [Network_Scanning]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Web_Content_Discovery]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Network_Scanning]{:.heading.flip-title}
+* [Web_Content_Discovery]{:.heading.flip-title}
 {:.related-posts.faded}
 
 
 ## 초기_공격_및_익스플로잇
 ### Common_Techniques
-* [기존_파일_수정,_간단_리버스쉘(bash)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [기존_파일_수정,_간단_리버스쉘(bash)]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Linux
-* [pgp_파일_해독]{:.heading.flip-title} --- How to install and run Hydejack.
+* [pgp_파일_해독]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Web_Attacks
-* [SSTI]{:.heading.flip-title} --- How to install and run Hydejack.
+* [SSTI]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Windows_Attacks
 #### Get Shell
-* [evil-winrm]{:.heading.flip-title} --- How to install and run Hydejack.
-* [wmiexec]{:.heading.flip-title} --- How to install and run Hydejack.
-* [psexec]{:.heading.flip-title} --- How to install and run Hydejack.
+* [evil-winrm]{:.heading.flip-title}
+* [wmiexec]{:.heading.flip-title}
+* [psexec]{:.heading.flip-title}
 {:.related-posts.faded}
 
 #### Impacket_Tool
-* [GetNPUsers]{:.heading.flip-title} --- How to install and run Hydejack.
-* [GetST]{:.heading.flip-title} --- How to install and run Hydejack.
-* [GetUserSPNs]{:.heading.flip-title} --- How to install and run Hydejack.
-* [lookup_sid]{:.heading.flip-title} --- How to install and run Hydejack.
-* [secretsdump]{:.heading.flip-title} --- How to install and run Hydejack.
+* [GetNPUsers]{:.heading.flip-title}
+* [GetST]{:.heading.flip-title}
+* [GetUserSPNs]{:.heading.flip-title}
+* [lookup_sid]{:.heading.flip-title}
+* [secretsdump]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Other
-* [jenkins]{:.heading.flip-title} --- How to install and run Hydejack.
+* [jenkins]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ## 권한_상승
 ### Linux
-* [Hijacking_Python_Library]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Wildcard_Injection]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Hijacking_Python_Library]{:.heading.flip-title}
+* [Wildcard_Injection]{:.heading.flip-title}
 {:.related-posts.faded}
 
 ### Windows
 #### AD 개체 권한
-* [AllowedToDelegate]{:.heading.flip-title} --- How to install and run Hydejack.
-* [GPO]{:.heading.flip-title} --- How to install and run Hydejack.
-* [RBCD_(Resource-Based_Constrained_Delegation)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [AllowedToDelegate]{:.heading.flip-title}
+* [GPO]{:.heading.flip-title}
+* [RBCD_(Resource-Based_Constrained_Delegation)]{:.heading.flip-title}
 {:.related-posts.faded}
 
 #### Dumping_Hashes
-* [mimikatz]{:.heading.flip-title} --- How to install and run Hydejack.
-* [쓰레기통_뒤지기]{:.heading.flip-title} --- How to install and run Hydejack.
+* [mimikatz]{:.heading.flip-title}
+* [쓰레기통_뒤지기]{:.heading.flip-title}
 {:.related-posts.faded}
 
 #### Privileges_&_groups
-* [DnsAdmins_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [SeBackupPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
-* [SeDebugPrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
-* [SeImpersonatePrivilege]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Server_Operator_(Group)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [DnsAdmins_(Group)]{:.heading.flip-title}
+* [SeBackupPrivilege]{:.heading.flip-title}
+* [SeDebugPrivilege]{:.heading.flip-title}
+* [SeImpersonatePrivilege]{:.heading.flip-title}
+* [Server_Operator_(Group)]{:.heading.flip-title}
 {:.related-posts.faded}
 
 #### Service_Attacks
-* [Insecure_Service_Permissions]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Unquoted_Service_Path]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Insecure_Service_Permissions]{:.heading.flip-title}
+* [Unquoted_Service_Path]{:.heading.flip-title}
 {:.related-posts.faded}
 
 #### Other
-* [AD_CS_(Active_Directory_Certificate_Services)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [AlwaysInstallElevated_(feat._PrivescCheck.ps1)]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Force_Change_Password_attack]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Golden_Ticket_Attack]{:.heading.flip-title} --- How to install and run Hydejack.
+* [AD_CS_(Active_Directory_Certificate_Services)]{:.heading.flip-title}
+* [AlwaysInstallElevated_(feat._PrivescCheck.ps1)]{:.heading.flip-title}
+* [Force_Change_Password_attack]{:.heading.flip-title}
+* [Golden_Ticket_Attack]{:.heading.flip-title}
 {:.related-posts.faded}
 
 
 ## 내부망_이동_및_후속_조치
 ### Pivoting_and_Tunnelling
-* [methology]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Multi-hope_pivoting_diagram]{:.heading.flip-title} --- How to install and run Hydejack.
-* [nmap]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Pivoting_Guide]{:.heading.flip-title} --- How to install and run Hydejack.
-* [ssh]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Tunnelling]{:.heading.flip-title} --- How to install and run Hydejack.
+* [methology]{:.heading.flip-title}
+* [Multi-hope_pivoting_diagram]{:.heading.flip-title}
+* [nmap]{:.heading.flip-title}
+* [Pivoting_Guide]{:.heading.flip-title}
+* [ssh]{:.heading.flip-title}
+* [Tunnelling]{:.heading.flip-title}
 {:.related-posts.faded}
 
 
 ### Post_Exploitation
-* [Remote_Hashdump_&_Bruteforce_Hashes]{:.heading.flip-title} --- How to install and run Hydejack.
+* [Remote_Hashdump_&_Bruteforce_Hashes]{:.heading.flip-title}
 {:.related-posts.faded}
 
 
 ## 도구_및_명령어
 ### General_Commands
-* [mount_(WSL_환경)]{:.heading.flip-title} --- How to install and run Hydejack.
+* [mount_(WSL_환경)]{:.heading.flip-title}
 #### 추가중
 {:.related-posts.faded}
 
