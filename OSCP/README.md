@@ -23,8 +23,8 @@ OSCP 공부하면서 Ai, Posting, youtube 등 다양한 곳에서 정보 주워�
 
 ## 방법론_및_체크리스트
 ### Linux_Methodology
-* [Enum_Cheatsheet]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Interactive_Shell_(shell_안정화)]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
+* [Enum_Cheatsheet]{:.heading.flip-title}
+* [Interactive_Shell_(shell_안정화)]{:.heading.flip-title}
 * [Linux_Automated_Enum]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
 {:.related-posts.faded}
 
