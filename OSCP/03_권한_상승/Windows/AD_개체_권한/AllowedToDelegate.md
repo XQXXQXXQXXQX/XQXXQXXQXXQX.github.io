@@ -10,7 +10,7 @@ sitemap: false
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-# 제한 없는 위임 (Unconstrained Delegation) 공격 가이드
+## 제한 없는 위임 (Unconstrained Delegation) 공격 가이드
 
 제한 없는 위임(Unconstrained Delegation)은 오래된 위임 방식으로, 특정 서버가 자신에게 인증한 사용자를 대신하여 **네트워크상의 어떤 서비스에도** 접근할 수 있도록 허용하는 매우 위험한 설정입니다. 공격자가 이 설정이 활성화된 서버의 관리자 권한을 획득하면, 해당 서버에 접속하는 다른 사용자(특히 도메인 관리자)의 권한을 완전히 탈취할 수 있습니다.
 
